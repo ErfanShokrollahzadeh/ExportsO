@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-forest text-cream/80">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-5">
@@ -21,7 +21,7 @@ export default function Footer() {
                 className="text-xl font-bold text-cream"
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
-                ExportsO
+               Global Trades
               </span>
             </div>
             <p className="text-sm leading-relaxed text-cream/55 max-w-xs">
@@ -42,6 +42,30 @@ export default function Footer() {
                 // { href: "/shipping", label: "Shipping & Trade" },
                 { href: "/about", label: "About Us" },
                 { href: "/contact", label: "Contact" },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-cream/55 hover:text-cream transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Our Services */}
+          <div>
+            <h4 className="text-xs font-semibold text-cream uppercase tracking-widest mb-5">
+              Our Services
+            </h4>
+            <ul className="flex flex-col gap-3">
+              {[
+                { href: "/", label: "Invest" },
+                { href: "/products", label: "Tax" },
+                { href: "/about", label: "consultancy" },
+                { href: "/contact", label: "Bookkeeping" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -105,7 +129,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-        </div>
+        </div>{/* end 3-col grid */}
 
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/35">
           <p>© {new Date().getFullYear()} ExportsO. All rights reserved.</p>

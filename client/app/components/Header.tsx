@@ -51,14 +51,14 @@ export default function Header() {
                 }`}
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
-                ExportsO
+                Global Trades
               </span>
               <p
                 className={`text-xs leading-none -mt-0.5 tracking-wide transition-colors ${
                   scrolled ? "text-muted" : "text-cream/60"
                 }`}
               >
-                Premium Imports
+                Export & Import  Ltd. Co.
               </p>
             </div>
           </Link>
