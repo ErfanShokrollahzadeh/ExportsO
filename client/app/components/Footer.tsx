@@ -64,8 +64,10 @@ export default function Footer() {
               {[
                 { href: "/", label: "Invest" },
                 { href: "/products", label: "Tax" },
-                { href: "/about", label: "consultancy" },
-                { href: "/contact", label: "Bookkeeping" },
+                { href: "/about", label: "Consultancy" },
+                { href: "/contact", label: "Frequency" },
+                { href: "/contact", label: "Ask Questions" },
+                { href: "/contact", label: "Industry" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
