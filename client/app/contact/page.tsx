@@ -138,7 +138,7 @@ export default function ContactPage() {
             <p className="text-muted mt-3 text-sm">Choose whichever works best for you.</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 [&>div:last-child]:sm:col-span-2 [&>div:last-child]:sm:max-w-lg [&>div:last-child]:sm:mx-auto [&>div:last-child]:sm:w-full">
             {contactCards.map((item) => (
               <div
                 key={item.label}
