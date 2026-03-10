@@ -62,14 +62,14 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-3">
               {[
-                { href: "/", label: "Invest" },
-                { href: "/products", label: "Tax" },
-                { href: "/about", label: "Consultancy" },
-                { href: "/contact", label: "Frequency" },
-                { href: "/contact", label: "Ask Questions" },
-                { href: "/contact", label: "Industry" },
+                { href: "/invest", label: "Invest" },
+                { href: "/tax", label: "Tax" },
+                { href: "/consultancy", label: "Consultancy" },
+                { href: "/frequency", label: "Frequency" },
+                { href: "/ask", label: "Ask Questions" },
+                { href: "/industry", label: "Industry" },
               ].map((link) => (
-                <li key={link.href}>
+                <li key={link.label}>
                   <Link
                     href={link.href}
                     className="text-sm text-cream/55 hover:text-cream transition-colors"
