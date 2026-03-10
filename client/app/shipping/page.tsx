@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Export & Import Rules — ExportsO",
   description:
-    "Learn about ExportsO's export and import procedures, shipping regulations, customs requirements, and delivery terms for trade between Pakistan and Turkey.",
+    "Learn about ExportsO's export and import procedures, shipping regulations, customs requirements, and delivery terms for trade to Turkey.",
 };
 
 const exportSteps = [
@@ -21,7 +21,7 @@ const exportSteps = [
   {
     step: "03",
     title: "Export Documentation",
-    desc: "We handle all Pakistani export paperwork: Phytosanitary Certificate, Certificate of Origin, Packing List, and Commercial Invoice in compliance with Turkish import requirements.",
+    desc: "We handle all export paperwork: Phytosanitary Certificate, Certificate of Origin, Packing List, and Commercial Invoice in compliance with Turkish import requirements.",
   },
   {
     step: "04",
@@ -54,12 +54,12 @@ const documents = [
   {
     icon: "🌿",
     title: "Phytosanitary Certificate",
-    desc: "Mandatory for all fresh produce. Issued by Pakistan's Department of Plant Protection (DPP), confirming the shipment is pest and disease free.",
+    desc: "Mandatory for all fresh produce. Issued by the Department of Plant Protection (DPP), confirming the shipment is pest and disease free.",
   },
   {
     icon: "🏛️",
     title: "Certificate of Origin",
-    desc: "Issued by the Pakistan Chamber of Commerce. Required by Turkish customs to determine applicable import duty rates.",
+    desc: "Issued by the Chamber of Commerce. Required by Turkish customs to determine applicable import duty rates.",
   },
   {
     icon: "🚢",
@@ -106,7 +106,7 @@ const faqs = [
     a: "MOQ varies by product. For fresh fruits, the standard minimum is one full pallet (typically 500–1,000 kg). Container-load orders receive preferential pricing. Contact us for specifics.",
   },
   {
-    q: "How long does shipping take from Pakistan to Turkey?",
+    q: "How long does shipping take to Turkey?",
     a: "Sea freight from Karachi to Istanbul/Mersin takes approximately 18–25 days. Air freight is 3–5 days and is available for urgent or premium shipments at higher cost.",
   },
   {
@@ -119,7 +119,7 @@ const faqs = [
   },
   {
     q: "Do you handle the Certificate of Origin?",
-    a: "Yes. ExportsO obtains the Certificate of Origin from the relevant Pakistani Chamber of Commerce as part of standard export documentation.",
+    a: "Yes. ExportsO obtains the Certificate of Origin from the relevant Chamber of Commerce as part of standard export documentation.",
   },
   {
     q: "What payment terms do you accept?",
@@ -150,10 +150,10 @@ export default function ShippingPage() {
           </h1>
           <p className="text-cream/55 mt-5 max-w-xl text-lg leading-relaxed">
             Everything you need to know about our shipping procedures, required documentation,
-            customs compliance, and delivery terms for trade between Pakistan and Turkey.
+            customs compliance, and delivery terms for trade to Turkey.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            {["Pakistan → Turkey", "Sea & Air Freight", "Full Documentation Support", "Cold-Chain Logistics"].map((tag) => (
+            {["→ Turkey", "Sea & Air Freight", "Full Documentation Support", "Cold-Chain Logistics"].map((tag) => (
               <span
                 key={tag}
                 className="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 text-cream/70 text-xs font-medium px-3 py-1.5 rounded-full"

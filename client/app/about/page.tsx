@@ -4,7 +4,7 @@ const values = [
   {
     icon: "🌱",
     title: "Authenticity",
-    desc: "We source directly from growers who have practiced their craft for generations, preserving the quality that makes Pakistani produce world-renowned.",
+    desc: "We source directly from growers who have practiced their craft for generations, preserving the quality that makes our produce world-renowned.",
   },
   {
     icon: "🤝",
@@ -42,7 +42,7 @@ export default function AboutPage() {
             className="text-5xl lg:text-6xl font-bold text-cream max-w-2xl leading-tight"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            From Pakistan&apos;s Orchards to Turkey&apos;s Tables
+            From Premium Orchards to Turkey&apos;s Tables
           </h1>
           <p className="text-cream/55 mt-5 max-w-xl text-lg leading-relaxed">
             A family-built bridge between two great cultures — united by quality, trust, and a love for exceptional produce.
@@ -76,19 +76,19 @@ export default function AboutPage() {
             <div className="space-y-5 text-muted text-base leading-relaxed">
               <p>
                 ExportsO was founded with a clear mission: to connect the extraordinary
-                agricultural wealth of Pakistan with the vibrant, demand-driven markets of Turkey.
-                We saw a gap — premium Pakistani produce was underrepresented in Turkey, and Turkish
+                agricultural wealth with the vibrant, demand-driven markets of Turkey.
+                We saw a gap — premium produce was underrepresented in Turkey, and Turkish
                 buyers were missing out on some of the world&apos;s most celebrated fruits.
               </p>
               <p>
-                Starting with Pakistan&apos;s world-renowned Kinnow mandarins, Chaunsa mangoes, and
+                Starting with world-renowned Kinnow mandarins, Chaunsa mangoes, and
                 premium Aseel dates, we established direct sourcing partnerships with certified farms
                 across Punjab, Sindh, and Balochistan. Every consignment that travels under the
                 ExportsO name has been personally vetted for quality.
               </p>
               <p>
                 As we grow, we&apos;re expanding into handicrafts, artisan goods, and home decor —
-                bringing the rich artistic traditions of Pakistan and Iran to Turkish homes and
+                bringing the rich artistic traditions to Turkish homes and
                 businesses.
               </p>
             </div>

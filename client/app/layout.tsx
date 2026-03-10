@@ -17,9 +17,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "ExportsO — Premium Pakistani Imports",
+  title: "ExportsO — Premium Imports",
   description:
-    "ExportsO brings the finest Pakistani fruits and artisan goods directly to Turkey. Quality, freshness, and authenticity — from farm to destination.",
+    "ExportsO brings the finest fruits and artisan goods directly to Turkey. Quality, freshness, and authenticity — from farm to destination.",
 };
 
 export default function RootLayout({

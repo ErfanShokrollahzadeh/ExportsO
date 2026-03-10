@@ -3,42 +3,42 @@ import Link from "next/link";
 const fruits = [
   {
     name: "Kinnow Mandarins",
-    origin: "Punjab, Pakistan",
+    origin: "Punjab",
     season: "Nov – Mar",
-    desc: "Pakistan's most iconic export fruit. Juicy, tangy, and rich in Vitamin C — Kinnow is a winter staple beloved across the Middle East and beyond.",
+    desc: "One of the most iconic export fruits. Juicy, tangy, and rich in Vitamin C — Kinnow is a winter staple beloved across the Middle East and beyond.",
     badge: null,
   },
   {
     name: "Chaunsa Mango",
-    origin: "Rahim Yar Khan, Pakistan",
+    origin: "Rahim Yar Khan",
     season: "Jul – Aug",
     desc: "The 'King of Mangoes'. Chaunsa is celebrated for its exceptionally sweet, fiber-free flesh and intoxicating aroma. A premium variety with global demand.",
     badge: "Premium",
   },
   {
     name: "Sindhri Mango",
-    origin: "Sindh, Pakistan",
+    origin: "Sindh",
     season: "Jun – Jul",
-    desc: "Large, golden, and honey-sweet — Sindhri is one of Pakistan's most exported mango varieties, prized for its smooth texture and rich flavor.",
+    desc: "Large, golden, and honey-sweet — Sindhri is one of the most exported mango varieties, prized for its smooth texture and rich flavor.",
     badge: null,
   },
   {
     name: "Aseel Dates",
     origin: "Khairpur, Sindh",
     season: "Sep – Nov",
-    desc: "Pakistan's finest soft dates — naturally sweet with a deep caramel richness. Aseel dates are perfect for gifting, hospitality, and premium retail.",
+    desc: "Finest soft dates — naturally sweet with a deep caramel richness. Aseel dates are perfect for gifting, hospitality, and premium retail.",
     badge: "Premium",
   },
   {
     name: "Guava",
-    origin: "Punjab, Pakistan",
+    origin: "Punjab",
     season: "Oct – Feb",
-    desc: "Crisp, fragrant Pakistani guavas with a pinkish blush flesh — celebrated for their distinctive aroma, sweetness, and versatility.",
+    desc: "Crisp, fragrant guavas with a pinkish blush flesh — celebrated for their distinctive aroma, sweetness, and versatility.",
     badge: null,
   },
   {
     name: "Pomegranate",
-    origin: "Balochistan, Pakistan",
+    origin: "Balochistan",
     season: "Oct – Dec",
     desc: "Ruby-red pomegranates from the cool highlands of Balochistan — among the most flavorful and antioxidant-rich pomegranates in the world.",
     badge: "Seasonal",
@@ -49,7 +49,7 @@ const upcoming = [
   {
     icon: "🏺",
     title: "Handicrafts",
-    desc: "Traditional artisan crafts from Pakistan and Iran — pottery, wood carvings, hand-stitched textiles, lacquerware, and more.",
+    desc: "Traditional artisan crafts — pottery, wood carvings, hand-stitched textiles, lacquerware, and more.",
   },
   {
     icon: "🪔",
@@ -85,7 +85,7 @@ export default function ProductsPage() {
             Our Products
           </h1>
           <p className="text-cream/55 mt-5 max-w-xl text-lg">
-            Premium Pakistani produce — sourced directly, imported with care.
+            Premium produce — sourced directly, imported with care.
           </p>
         </div>
         <div className="absolute bottom-0 left-0 right-0">
@@ -183,7 +183,7 @@ export default function ProductsPage() {
               Coming Categories
             </h2>
             <p className="text-muted mt-3 max-w-xl mx-auto text-sm">
-              We are actively developing new product lines from Pakistan and Iran, bringing more of
+              We are actively developing new product lines, bringing more of
               the region&apos;s richness to Turkey.
             </p>
           </div>

@@ -25,7 +25,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm leading-relaxed text-cream/55 max-w-xs">
-              Bringing the finest produce and artisan goods from Pakistan to Turkey — with
+              Bringing the finest produce and artisan goods to Turkey — with
               care, quality, and authenticity in every shipment.
             </p>
           </div>
@@ -149,7 +149,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/35">
           <p>© {new Date().getFullYear()} ExportsO. All rights reserved.</p>
-          <p>Sourced from Pakistan & Iran · Delivered to Turkey</p>
+          <p>Sourced Globally · Delivered to Turkey</p>
         </div>
       </div>
     </footer>

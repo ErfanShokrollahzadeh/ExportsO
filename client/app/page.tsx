@@ -10,12 +10,12 @@ const features = [
   {
     icon: "🌿",
     title: "Direct Sourcing",
-    desc: "We work directly with certified Pakistani farms, cutting out middlemen to deliver the freshest produce at competitive prices.",
+    desc: "We work directly with certified farms, cutting out middlemen to deliver the freshest produce at competitive prices.",
   },
   {
     icon: "🚢",
     title: "Reliable Logistics",
-    desc: "Our tested import chain ensures timely, safe delivery from Pakistan to Turkish markets — every single time.",
+    desc: "Our tested import chain ensures timely, safe delivery to Turkish markets — every single time.",
   },
   {
     icon: "✅",
@@ -28,7 +28,7 @@ const categories = [
   {
     title: "Fresh Fruits",
     description:
-      "Kinnow mandarins, premium mangoes, sun-dried dates, guava, and more — straight from Pakistani orchards.",
+      "Kinnow mandarins, premium mangoes, sun-dried dates, guava, and more — straight from the finest orchards.",
     emoji: "🍊",
     available: true,
     href: "/products",
@@ -36,7 +36,7 @@ const categories = [
   {
     title: "Handicrafts",
     description:
-      "Handcrafted artisan goods from Pakistan and Iran — traditional craftsmanship with timeless beauty.",
+      "Handcrafted artisan goods — traditional craftsmanship with timeless beauty.",
     emoji: "🏺",
     available: false,
     href: "/products",
@@ -84,7 +84,7 @@ export default function HomePage() {
             <span className="text-sand">Pure Origins</span>
           </h1>
           <p className="text-lg sm:text-xl text-cream/65 max-w-2xl mx-auto mb-12 leading-relaxed">
-            ExportsO bridges the finest Pakistani orchards with Turkish markets —
+            ExportsO bridges the finest orchards with Turkish markets —
             delivering freshness, quality, and authenticity with every shipment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

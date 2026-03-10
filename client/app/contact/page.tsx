@@ -62,7 +62,7 @@ const contactCards = [
     label: "Location",
     value: "Istanbul, Turkey",
     href: null,
-    note: "Sourcing from Pakistan & Iran",
+    note: "Global Sourcing",
   },
 ];
 
@@ -163,7 +163,7 @@ export default function ContactPage() {
 
             </div>
             <p className="text-cream/45 text-sm mt-5 max-w-md mx-auto">
-              We operate sourcing networks across Pakistan and Iran, with primary import and
+              We operate global sourcing networks, with primary import and
               distribution into the Turkish market.
             </p>
           </div>
