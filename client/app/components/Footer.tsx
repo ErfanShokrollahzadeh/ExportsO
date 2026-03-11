@@ -24,9 +24,8 @@ export default function Footer() {
                Global Trades
               </span>
             </div>
-            <p className="text-sm leading-relaxed text-cream/55 max-w-xs">
-              Bringing the finest produce and artisan goods to Turkey — with
-              care, quality, and authenticity in every shipment.
+            <p className="text-sm leading-relaxed text-cream/55 max-w-xs font-bold">
+              Pure Quality, Fast Delivery, Full Confidence.
             </p>
           </div>
 
@@ -184,7 +183,7 @@ export default function Footer() {
         </div>{/* end 3-col grid */}
 
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/35">
-          <p>© {new Date().getFullYear()} ExportsO. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Global Trades. All rights reserved.</p>
           <p>Sourced Globally · Delivered to Turkey</p>
         </div>
       </div>

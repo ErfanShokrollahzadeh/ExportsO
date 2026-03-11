@@ -84,8 +84,7 @@ export default function HomePage() {
             <span className="text-sand">Pure Origins</span>
           </h1>
           <p className="text-lg sm:text-xl text-cream/65 max-w-2xl mx-auto mb-12 leading-relaxed">
-            ExportsO bridges the finest orchards with Turkish markets —
-            delivering freshness, quality, and authenticity with every shipment.
+            Global Trades brings the finest fruits and artisan goods directly to Turkey. Quality, freshness, and authenticity — from farm to destination.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -135,7 +134,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
             <p className="text-amber text-sm font-semibold uppercase tracking-widest mb-3">
-              Why ExportsO
+              Why Global Trades?
             </p>
             <h2
               className="text-4xl lg:text-5xl font-bold text-forest"
