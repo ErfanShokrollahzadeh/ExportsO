@@ -1,4 +1,5 @@
 import Link from "next/link";
+import VisitorCounter from "./components/VisitorCounter";
 
 const stats = [
   { value: "100%", label: "Fresh Produce" },
@@ -212,6 +213,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Number of views the site */}
+      <VisitorCounter />
 
       {/* CTA Banner */}
       <section className="py-24 bg-forest relative overflow-hidden">
