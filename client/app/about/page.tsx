@@ -1,29 +1,13 @@
-import Link from "next/link";
+"use client";
 
-const values = [
-  {
-    icon: "🌱",
-    title: "Authenticity",
-    desc: "We source directly from growers who have practiced their craft for generations, preserving the quality that makes our produce world-renowned.",
-  },
-  {
-    icon: "🤝",
-    title: "Partnership",
-    desc: "Long-term relationships with farmers, logistics partners, and clients are at our core. We grow when our partners grow.",
-  },
-  {
-    icon: "🔍",
-    title: "Transparency",
-    desc: "From farm gate to buyer, we provide full visibility into our supply chain — honest pricing, honest sourcing.",
-  },
-  {
-    icon: "🌍",
-    title: "Sustainability",
-    desc: "We choose suppliers who care for their land and communities, building an import chain that lasts.",
-  },
-];
+import Link from "next/link";
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../lib/translations";
 
 export default function AboutPage() {
+  const { lang } = useLanguage();
+  const A = translations[lang].about;
+
   return (
     <>
       {/* Hero */}
@@ -36,16 +20,16 @@ export default function AboutPage() {
         />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
           <p className="text-amber text-sm font-semibold uppercase tracking-widest mb-4">
-            Our Story
+            {A.badge}
           </p>
           <h1
             className="text-5xl lg:text-6xl font-bold text-cream max-w-2xl leading-tight"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            From Premium Orchards to Turkey&apos;s Tables
+            {A.heroTitle}
           </h1>
           <p className="text-cream/55 mt-5 max-w-xl text-lg leading-relaxed">
-            A family-built bridge between two great cultures — united by quality, trust, and a love for exceptional produce.
+            {A.heroSubtitle}
           </p>
         </div>
         <div className="absolute bottom-0 left-0 right-0">
@@ -65,32 +49,18 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <p className="text-amber text-sm font-semibold uppercase tracking-widest mb-4">
-              Who We Are
+              {A.whoWeAre}
             </p>
             <h2
               className="text-4xl font-bold text-forest mb-7"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              A Bridge Between Two Rich Cultures
+              {A.bridgeTitle}
             </h2>
             <div className="space-y-5 text-muted text-base leading-relaxed">
-              <p>
-                ExportsO was founded with a clear mission: to connect the extraordinary
-                agricultural wealth with the vibrant, demand-driven markets of Turkey.
-                We saw a gap — premium produce was underrepresented in Turkey, and Turkish
-                buyers were missing out on some of the world&apos;s most celebrated fruits.
-              </p>
-              <p>
-                Starting with world-renowned Kinnow mandarins, Chaunsa mangoes, and
-                premium Aseel dates, we established direct sourcing partnerships with certified farms
-                across Punjab, Sindh, and Balochistan. Every consignment that travels under the
-                ExportsO name has been personally vetted for quality.
-              </p>
-              <p>
-                As we grow, we&apos;re expanding into handicrafts, artisan goods, and home decor —
-                bringing the rich artistic traditions to Turkish homes and
-                businesses.
-              </p>
+              <p>{A.p1}</p>
+              <p>{A.p2}</p>
+              <p>{A.p3}</p>
             </div>
           </div>
 
@@ -102,7 +72,7 @@ export default function AboutPage() {
               >
                 3+
               </div>
-              <div className="text-cream/60 text-sm">Source Regions</div>
+              <div className="text-cream/60 text-sm">{A.sourceRegions}</div>
             </div>
             <div className="bg-amber rounded-2xl p-8 text-center text-white">
               <div
@@ -111,7 +81,7 @@ export default function AboutPage() {
               >
                 100%
               </div>
-              <div className="text-white/70 text-sm">Direct Sourcing</div>
+              <div className="text-white/70 text-sm">{A.directSourcing}</div>
             </div>
             <div className="bg-sand rounded-2xl p-8 text-center text-bark col-span-2">
               <div
@@ -120,7 +90,7 @@ export default function AboutPage() {
               >
                 3+
               </div>
-              <div className="text-muted text-sm">Product Categories — and growing</div>
+              <div className="text-muted text-sm">{A.productCategories}</div>
             </div>
           </div>
         </div>
@@ -131,17 +101,17 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
             <p className="text-amber text-sm font-semibold uppercase tracking-widest mb-3">
-              What Drives Us
+              {A.whatDrivesUs}
             </p>
             <h2
               className="text-4xl font-bold text-forest"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              Our Values
+              {A.ourValues}
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((v) => (
+            {A.values.map((v) => (
               <div
                 key={v.title}
                 className="bg-white rounded-2xl p-6 shadow-sm border border-sand/40 hover:shadow-md transition-shadow"
@@ -168,18 +138,16 @@ export default function AboutPage() {
             className="text-4xl font-bold text-cream mb-6"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            The Journey Ahead
+            {A.journeyAhead}
           </h2>
           <p className="text-cream/60 text-lg mb-10 leading-relaxed">
-            We are at the beginning of an exciting chapter. As our fruit imports take root
-            in Turkey, we&apos;re already laying the groundwork for handicrafts, home accessories,
-            and cultural goods — creating a truly unique import house from the heart of the East.
+            {A.journeyText}
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 bg-amber text-white font-semibold px-8 py-4 rounded-full hover:bg-amber-light transition-colors shadow-lg"
           >
-            Work With Us
+            {A.workWithUs}
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

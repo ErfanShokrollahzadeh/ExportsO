@@ -1,26 +1,42 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/products", label: "Products" },
-  // { href: "/shipping", label: "Shipping & Trade" },
-  { href: "/about", label: "About Us" },
-  { href: "/contact", label: "Contact" },
-];
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../lib/translations";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const langRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
+  const { lang, setLang } = useLanguage();
+  const T = translations[lang];
+
+  const navLinks = [
+    { href: "/", label: T.nav.home },
+    { href: "/products", label: T.nav.products },
+    { href: "/about", label: T.nav.about },
+    { href: "/contact", label: T.nav.contact },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Close lang dropdown on outside click
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setLangOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
   return (
@@ -58,7 +74,7 @@ export default function Header() {
                   scrolled ? "text-muted" : "text-cream/60"
                 }`}
               >
-                Export & Import  Ltd. Co.
+                {T.nav.exportImport}
               </p>
             </div>
           </Link>
@@ -89,13 +105,64 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA + Mobile Trigger */}
-          <div className="flex items-center gap-4">
+          {/* CTA + Language + Mobile Trigger */}
+          <div className="flex items-center gap-3">
+            {/* Language Switcher */}
+            <div ref={langRef} className="relative hidden md:block">
+              <button
+                onClick={() => setLangOpen(!langOpen)}
+                className={`flex items-center gap-1.5 text-sm font-medium px-3 py-2 rounded-full border transition-all ${
+                  scrolled
+                    ? "border-sand/60 text-bark/70 hover:text-forest hover:border-forest/30"
+                    : "border-white/20 text-cream/80 hover:text-cream hover:bg-white/10"
+                }`}
+                aria-label="Switch language"
+              >
+                <span>{lang === "en" ? "🇬🇧" : "🇹🇷"}</span>
+                <span className="uppercase tracking-wider text-xs font-semibold">{lang}</span>
+                <svg
+                  className={`w-3 h-3 transition-transform duration-200 ${langOpen ? "rotate-180" : ""}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {/* Dropdown */}
+              <div
+                className={`absolute right-0 top-full mt-2 w-36 bg-white rounded-xl shadow-lg border border-sand/40 overflow-hidden transition-all duration-200 origin-top-right ${
+                  langOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
+                }`}
+              >
+                {(["en", "tr"] as const).map((l) => (
+                  <button
+                    key={l}
+                    onClick={() => { setLang(l); setLangOpen(false); }}
+                    className={`w-full flex items-center gap-2.5 px-4 py-3 text-sm transition-colors ${
+                      lang === l
+                        ? "bg-forest/8 text-forest font-semibold"
+                        : "text-bark/70 hover:bg-sand/30 hover:text-forest"
+                    }`}
+                  >
+                    <span>{l === "en" ? "🇬🇧" : "🇹🇷"}</span>
+                    <span>{l === "en" ? "English" : "Türkçe"}</span>
+                    {lang === l && (
+                      <svg className="w-3.5 h-3.5 ml-auto text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                      </svg>
+                    )}
+                  </button>
+                ))}
+              </div>
+            </div>
+
             <Link
               href="/contact"
               className="hidden md:inline-flex items-center gap-2 bg-forest text-cream text-sm font-medium px-5 py-2.5 rounded-full hover:bg-forest-mid transition-colors shadow-md"
             >
-              Get in Touch
+              {T.nav.getInTouch}
             </Link>
 
             {/* Mobile hamburger */}
@@ -127,7 +194,7 @@ export default function Header() {
       {/* Mobile Menu */}
       <div
         className={`md:hidden transition-all duration-300 overflow-hidden bg-cream border-t border-sand/60 ${
-          menuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+          menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <nav className="px-6 py-4 flex flex-col gap-1">
@@ -143,12 +210,31 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+
+          {/* Mobile language toggle */}
+          <div className="flex gap-2 py-3 border-b border-sand/50">
+            {(["en", "tr"] as const).map((l) => (
+              <button
+                key={l}
+                onClick={() => setLang(l)}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors ${
+                  lang === l
+                    ? "bg-forest text-cream border-forest"
+                    : "border-sand/60 text-bark/60 hover:border-forest/40"
+                }`}
+              >
+                <span>{l === "en" ? "🇬🇧" : "🇹🇷"}</span>
+                <span className="uppercase">{l}</span>
+              </button>
+            ))}
+          </div>
+
           <Link
             href="/contact"
             onClick={() => setMenuOpen(false)}
             className="mt-3 bg-forest text-cream text-sm font-medium px-5 py-3 rounded-full text-center hover:bg-forest-mid transition-colors"
           >
-            Get in Touch
+            {T.nav.getInTouch}
           </Link>
         </nav>
       </div>

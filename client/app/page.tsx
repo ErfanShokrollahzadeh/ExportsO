@@ -1,58 +1,21 @@
+"use client";
+
 import Link from "next/link";
 import VisitorCounter from "./components/VisitorCounter";
-
-const stats = [
-  { value: "100%", label: "Fresh Produce" },
-  { value: "Direct", label: "Farm to Destination" },
-  { value: "Premium", label: "Quality Guaranteed" },
-];
-
-const features = [
-  {
-    icon: "🌿",
-    title: "Direct Sourcing",
-    desc: "We work directly with certified farms, cutting out middlemen to deliver the freshest produce at competitive prices.",
-  },
-  {
-    icon: "🚢",
-    title: "Reliable Logistics",
-    desc: "Our tested import chain ensures timely, safe delivery to Turkish markets — every single time.",
-  },
-  {
-    icon: "✅",
-    title: "Quality Assured",
-    desc: "Every shipment undergoes strict quality checks meeting international food safety and export standards.",
-  },
-];
-
-const categories = [
-  {
-    title: "Fresh Fruits",
-    description:
-      "Kinnow mandarins, premium mangoes, sun-dried dates, guava, and more — straight from the finest orchards.",
-    emoji: "🍊",
-    available: true,
-    href: "/products",
-  },
-  {
-    title: "Handicrafts",
-    description:
-      "Handcrafted artisan goods — traditional craftsmanship with timeless beauty.",
-    emoji: "🏺",
-    available: false,
-    href: "/products",
-  },
-  {
-    title: "Home & Decor",
-    description:
-      "Curated home accessories, textiles, and decorative pieces reflecting the rich heritage of the region.",
-    emoji: "🪔",
-    available: false,
-    href: "/products",
-  },
-];
+import { useLanguage } from "./context/LanguageContext";
+import { translations } from "./lib/translations";
 
 export default function HomePage() {
+  const { lang } = useLanguage();
+  const T = translations[lang];
+  const H = T.home;
+
+  const stats = [
+    { value: "100%", label: H.stats.freshProduce },
+    { value: "Direct", label: H.stats.farmToDestination },
+    { value: "Premium", label: H.stats.qualityGuaranteed },
+  ];
+
   return (
     <>
       {/* Hero */}
@@ -73,26 +36,26 @@ export default function HomePage() {
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-8">
             <span className="w-2 h-2 bg-amber rounded-full animate-pulse" />
             <span className="text-cream/80 text-xs tracking-widest uppercase font-medium">
-              Turkey
+              {H.badge}
             </span>
           </div>
           <h1
             className="text-5xl sm:text-6xl lg:text-7xl font-bold text-cream leading-tight mb-6 max-w-4xl mx-auto"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            Premium Imports,
+            {H.heroTitle1}
             <br />
-            <span className="text-sand">Pure Origins</span>
+            <span className="text-sand">{H.heroTitle2}</span>
           </h1>
           <p className="text-lg sm:text-xl text-cream/65 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Global Trades brings the finest fruits and artisan goods directly to Turkey. Quality, freshness, and authenticity — from farm to destination.
+            {H.heroSubtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/products"
               className="inline-flex items-center justify-center gap-2 bg-amber text-white font-semibold px-8 py-4 rounded-full hover:bg-amber-light transition-colors shadow-lg text-base"
             >
-              Explore Products
+              {H.exploreProducts}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -101,7 +64,7 @@ export default function HomePage() {
               href="/about"
               className="inline-flex items-center justify-center gap-2 border border-white/30 text-cream font-medium px-8 py-4 rounded-full hover:bg-white/10 transition-colors text-base"
             >
-              Our Story
+              {H.ourStory}
             </Link>
           </div>
           <div className="mt-20 grid grid-cols-3 gap-8 max-w-2xl mx-auto border-t border-white/15 pt-10">
@@ -135,17 +98,17 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
             <p className="text-amber text-sm font-semibold uppercase tracking-widest mb-3">
-              Why Global Trades?
+              {H.whyUs}
             </p>
             <h2
               className="text-4xl lg:text-5xl font-bold text-forest"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              Built on Trust & Quality
+              {H.builtOnTrust}
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((f) => (
+            {H.features.map((f) => (
               <div
                 key={f.title}
                 className="bg-white rounded-2xl p-8 shadow-sm border border-sand/40 hover:shadow-md transition-shadow"
@@ -164,17 +127,17 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
             <p className="text-amber text-sm font-semibold uppercase tracking-widest mb-3">
-              What We Offer
+              {H.whatWeOffer}
             </p>
             <h2
               className="text-4xl lg:text-5xl font-bold text-forest"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              Our Categories
+              {H.ourCategories}
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {categories.map((cat) => (
+            {H.categories.map((cat) => (
               <div
                 key={cat.title}
                 className={`relative bg-white rounded-2xl overflow-hidden shadow-sm border transition-all ${
@@ -185,7 +148,7 @@ export default function HomePage() {
               >
                 {!cat.available && (
                   <div className="absolute top-4 right-4 bg-amber/15 border border-amber/30 text-amber text-xs font-semibold px-3 py-1 rounded-full z-10">
-                    Coming Soon
+                    {H.comingSoon}
                   </div>
                 )}
                 <div className="h-40 bg-linear-to-br from-forest/10 to-sand/30 flex items-center justify-center text-7xl">
@@ -196,16 +159,16 @@ export default function HomePage() {
                   <p className="text-muted text-sm leading-relaxed mb-5">{cat.description}</p>
                   {cat.available ? (
                     <Link
-                      href={cat.href}
+                      href="/products"
                       className="inline-flex items-center gap-2 text-forest font-medium text-sm hover:text-forest-mid transition-colors"
                     >
-                      View Products
+                      {H.viewProducts}
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
                     </Link>
                   ) : (
-                    <span className="text-muted/60 text-sm">Available soon</span>
+                    <span className="text-muted/60 text-sm">{H.availableSoon}</span>
                   )}
                 </div>
               </div>
@@ -230,17 +193,16 @@ export default function HomePage() {
             className="text-4xl lg:text-5xl font-bold text-cream mb-6"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            Ready to Source with Us?
+            {H.ctaTitle}
           </h2>
           <p className="text-cream/65 text-lg mb-10 leading-relaxed">
-            Whether you&apos;re a retailer, distributor, or wholesaler in Turkey — we&apos;d love to talk.
-            Reach out and let&apos;s build something lasting.
+            {H.ctaSubtitle}
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 bg-amber text-white font-semibold px-8 py-4 rounded-full hover:bg-amber-light transition-colors shadow-lg text-base"
           >
-            Contact Us Today
+            {H.contactUsToday}
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

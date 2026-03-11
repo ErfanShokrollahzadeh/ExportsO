@@ -1,69 +1,13 @@
+"use client";
+
 import Link from "next/link";
-
-const fruits = [
-  {
-    name: "Kinnow Mandarins",
-    origin: "Punjab",
-    season: "Nov – Mar",
-    desc: "One of the most iconic export fruits. Juicy, tangy, and rich in Vitamin C — Kinnow is a winter staple beloved across the Middle East and beyond.",
-    badge: null,
-  },
-  {
-    name: "Chaunsa Mango",
-    origin: "Rahim Yar Khan",
-    season: "Jul – Aug",
-    desc: "The 'King of Mangoes'. Chaunsa is celebrated for its exceptionally sweet, fiber-free flesh and intoxicating aroma. A premium variety with global demand.",
-    badge: "Premium",
-  },
-  {
-    name: "Sindhri Mango",
-    origin: "Sindh",
-    season: "Jun – Jul",
-    desc: "Large, golden, and honey-sweet — Sindhri is one of the most exported mango varieties, prized for its smooth texture and rich flavor.",
-    badge: null,
-  },
-  {
-    name: "Aseel Dates",
-    origin: "Khairpur, Sindh",
-    season: "Sep – Nov",
-    desc: "Finest soft dates — naturally sweet with a deep caramel richness. Aseel dates are perfect for gifting, hospitality, and premium retail.",
-    badge: "Premium",
-  },
-  {
-    name: "Guava",
-    origin: "Punjab",
-    season: "Oct – Feb",
-    desc: "Crisp, fragrant guavas with a pinkish blush flesh — celebrated for their distinctive aroma, sweetness, and versatility.",
-    badge: null,
-  },
-  {
-    name: "Pomegranate",
-    origin: "Balochistan",
-    season: "Oct – Dec",
-    desc: "Ruby-red pomegranates from the cool highlands of Balochistan — among the most flavorful and antioxidant-rich pomegranates in the world.",
-    badge: "Seasonal",
-  },
-];
-
-const upcoming = [
-  {
-    icon: "🏺",
-    title: "Handicrafts",
-    desc: "Traditional artisan crafts — pottery, wood carvings, hand-stitched textiles, lacquerware, and more.",
-  },
-  {
-    icon: "🪔",
-    title: "Home Accessories",
-    desc: "Functional and decorative home accessories that carry the warmth and artistry of Eastern craftsmanship into modern interiors.",
-  },
-  {
-    icon: "🖼️",
-    title: "Decor & Art",
-    desc: "Handmade decorative pieces, wall art, ornaments, and statement objects inspired by the rich visual cultures of the region.",
-  },
-];
+import { useLanguage } from "../context/LanguageContext";
+import { translations, fruitBadgeTypes } from "../lib/translations";
 
 export default function ProductsPage() {
+  const { lang } = useLanguage();
+  const P = translations[lang].products;
+
   return (
     <>
       {/* Hero */}
@@ -76,16 +20,16 @@ export default function ProductsPage() {
         />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
           <p className="text-amber text-sm font-semibold uppercase tracking-widest mb-4">
-            What We Import
+            {P.badge}
           </p>
           <h1
             className="text-5xl lg:text-6xl font-bold text-cream max-w-2xl leading-tight"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            Our Products
+            {P.heroTitle}
           </h1>
           <p className="text-cream/55 mt-5 max-w-xl text-lg">
-            Premium produce — sourced directly, imported with care.
+            {P.heroSubtitle}
           </p>
         </div>
         <div className="absolute bottom-0 left-0 right-0">
@@ -107,19 +51,19 @@ export default function ProductsPage() {
             <span className="text-4xl">🍊</span>
             <div>
               <p className="text-amber text-sm font-semibold uppercase tracking-widest">
-                Current Range
+                {P.currentRange}
               </p>
               <h2
                 className="text-3xl font-bold text-forest"
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
-                Fresh Fruits
+                {P.freshFruits}
               </h2>
             </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {fruits.map((fruit) => (
+            {P.fruits.map((fruit, idx) => (
               <div
                 key={fruit.name}
                 className="bg-white rounded-2xl p-6 shadow-sm border border-sand/40 hover:shadow-md hover:-translate-y-0.5 transition-all group"
@@ -131,15 +75,15 @@ export default function ProductsPage() {
                     </h3>
                     <p className="text-muted text-xs mt-0.5">{fruit.origin}</p>
                   </div>
-                  {fruit.badge && (
+                  {fruitBadgeTypes[idx] && (
                     <span
                       className={`text-xs font-semibold px-2.5 py-1 rounded-full shrink-0 ${
-                        fruit.badge === "Premium"
+                        fruitBadgeTypes[idx] === "premium"
                           ? "bg-amber/15 text-amber"
                           : "bg-forest/10 text-forest"
                       }`}
                     >
-                      {fruit.badge}
+                      {fruitBadgeTypes[idx] === "premium" ? P.badgePremium : P.badgeSeasonal}
                     </span>
                   )}
                 </div>
@@ -158,7 +102,7 @@ export default function ProductsPage() {
                       d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                     />
                   </svg>
-                  Season: {fruit.season}
+                  {P.season} {fruit.season}
                 </div>
               </div>
             ))}
@@ -173,23 +117,22 @@ export default function ProductsPage() {
             <div className="inline-flex items-center gap-2 bg-amber/15 border border-amber/30 rounded-full px-4 py-1.5 mb-5">
               <span className="w-2 h-2 bg-amber rounded-full animate-pulse" />
               <span className="text-amber text-xs font-semibold uppercase tracking-widest">
-                Expanding Soon
+                {P.expandingSoon}
               </span>
             </div>
             <h2
               className="text-4xl font-bold text-forest"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              Coming Categories
+              {P.comingCategories}
             </h2>
             <p className="text-muted mt-3 max-w-xl mx-auto text-sm">
-              We are actively developing new product lines, bringing more of
-              the region&apos;s richness to Turkey.
+              {P.comingText}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {upcoming.map((cat) => (
+            {P.upcoming.map((cat) => (
               <div
                 key={cat.title}
                 className="bg-white/60 rounded-2xl p-8 border border-dashed border-sand text-center hover:bg-white/80 transition-colors"
@@ -210,17 +153,16 @@ export default function ProductsPage() {
             className="text-3xl font-bold text-forest mb-4"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            Interested in Bulk Orders?
+            {P.ctaTitle}
           </h2>
           <p className="text-muted mb-8 max-w-xl mx-auto">
-            We work with retailers, distributors, and wholesalers across Turkey. Get in touch to
-            discuss volumes, logistics, and pricing.
+            {P.ctaText}
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 bg-forest text-cream font-semibold px-8 py-4 rounded-full hover:bg-forest-mid transition-colors shadow-md"
           >
-            Send an Inquiry
+            {P.sendInquiry}
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

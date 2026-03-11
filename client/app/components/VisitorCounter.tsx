@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../lib/translations";
 
 function AnimatedCount({ target }: { target: number }) {
   const [display, setDisplay] = useState(0);
@@ -34,6 +36,8 @@ function AnimatedCount({ target }: { target: number }) {
 export default function VisitorCounter() {
   const [count, setCount] = useState<number | null>(null);
   const [visible, setVisible] = useState(false);
+  const { lang } = useLanguage();
+  const T = translations[lang].visitor;
 
   useEffect(() => {
     async function trackVisit() {
@@ -80,7 +84,7 @@ export default function VisitorCounter() {
 
           <div className="flex flex-col">
             <span className="text-cream/60 text-xs uppercase tracking-widest font-medium mb-0.5">
-              Total Visitors
+              {T.totalVisitors}
             </span>
             <span
               className="text-4xl font-bold text-sand leading-none tabular-nums"
@@ -93,7 +97,9 @@ export default function VisitorCounter() {
               )}
             </span>
             <span className="text-cream/50 text-xs mt-1">
-              {count === 1 ? "person has visited" : "people have visited"} this site
+              {count === null
+                ? T.loading
+                : `${count === 1 ? T.visitedSingular : T.visitedPlural}`}
             </span>
           </div>
         </div>
@@ -101,7 +107,7 @@ export default function VisitorCounter() {
         {/* Live badge */}
         <div className="flex items-center gap-2 bg-amber/20 border border-amber/40 rounded-full px-4 py-2 text-amber text-xs font-semibold uppercase tracking-widest">
           <span className="w-2 h-2 rounded-full bg-amber animate-pulse" />
-          Live Counter
+          {T.liveCounter}
         </div>
       </div>
     </section>
