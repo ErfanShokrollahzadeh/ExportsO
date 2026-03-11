@@ -205,6 +205,402 @@ export const translations = {
       operationalText:
         "We operate global sourcing networks, with primary import and distribution into the Turkish market.",
     },
+    invest: {
+      badge: "Investment Opportunities",
+      heroTitle: "Grow With Global Trade",
+      heroSubtitle:
+        "ExportsO offers structured investment partnerships in high-growth international trade — backed by real assets, real shipments, and transparent reporting.",
+      requestPack: "Request Investment Pack",
+      whereCapitalWorks: "Where Your Capital Works",
+      investmentSectors: "Investment Sectors",
+      howItWorks: "How It Works",
+      investmentProcess: "The Investment Process",
+      ctaTitle: "Ready to Invest?",
+      ctaText:
+        "Join a growing network of investors backing real trade, real products, and real returns. We're selective about our partners — reach out to start the conversation.",
+      getInTouch: "Get in Touch",
+      stats: [
+        { value: "4+", label: "Active Trade Routes" },
+        { value: "100%", label: "On-time Delivery Rate" },
+        { value: "₺0", label: "Outstanding Defaults" },
+        { value: "2x", label: "Target Volume Growth" },
+      ],
+      opportunities: [
+        {
+          icon: "🌿",
+          title: "Agricultural Commodities",
+          desc: "Invest in the sourcing and distribution of premium fresh produce — a resilient, high-demand sector with year-round cycles and growing export volumes.",
+          return: "12–18% projected",
+        },
+        {
+          icon: "🏺",
+          title: "Artisan & Handicraft Trade",
+          desc: "Back the import of exclusive handcrafted goods into European and Turkish markets. Low competition, high margin, culturally differentiated products.",
+          return: "15–22% projected",
+        },
+        {
+          icon: "🚢",
+          title: "Logistics Infrastructure",
+          desc: "Co-invest in cold-chain logistics capabilities and warehousing that underpin every shipment — essential infrastructure with stable, long-term returns.",
+          return: "8–14% projected",
+        },
+        {
+          icon: "🌍",
+          title: "Market Expansion",
+          desc: "Fund our geographic expansion into new destination markets across Europe and the Middle East, amplifying existing supply chain strength.",
+          return: "20–30% projected",
+        },
+      ],
+      steps: [
+        {
+          step: "01",
+          title: "Initial Consultation",
+          desc: "Schedule a call with our investment team. We walk you through our operations, financials, and current opportunities in detail.",
+        },
+        {
+          step: "02",
+          title: "Due Diligence Package",
+          desc: "Receive a comprehensive investment deck including supply chain data, projected returns, risk analysis, and legal structure.",
+        },
+        {
+          step: "03",
+          title: "Term Agreement",
+          desc: "We agree on investment size, duration, and return structure. All agreements are governed by Turkish commercial law.",
+        },
+        {
+          step: "04",
+          title: "Active Partnership",
+          desc: "Your capital goes to work. You receive regular reporting, shipment updates, and quarterly financial statements.",
+        },
+      ],
+    },
+    tax: {
+      badge: "Tax & Duty Services",
+      heroTitle1: "Trade Smarter,",
+      heroTitle2: "Pay Less Tax",
+      heroSubtitle:
+        "Expert guidance on import duties, VAT, customs tariffs, and cross-border tax compliance — so you pay exactly what you owe, and not a cent more.",
+      tags: ["Import Duties", "VAT Compliance", "HS Classification", "Duty Drawback"],
+      whatWeCover: "What We Cover",
+      ourTaxServices: "Our Tax Services",
+      servicesSubtitle:
+        "End-to-end tax support for importers, exporters, and cross-border traders operating in and around Turkey.",
+      commonQuestions: "Common Questions",
+      taxFaq: "Tax FAQ",
+      ctaTitle: "Need Tax Clarity?",
+      ctaText:
+        "Our team handles the complexity so you can focus on growing your trade. Reach out for a complimentary tax assessment.",
+      bookConsultation: "Book a Tax Consultation",
+      services: [
+        {
+          icon: "📋",
+          title: "Import Duty Classification",
+          desc: "We identify the correct HS tariff codes for your goods, ensuring accurate duty calculations and avoiding costly misclassification penalties.",
+        },
+        {
+          icon: "🧾",
+          title: "VAT & Customs Compliance",
+          desc: "Full guidance on Turkish VAT obligations for imported goods, deferred VAT schemes, and exemption eligibility for qualifying transactions.",
+        },
+        {
+          icon: "📊",
+          title: "Trade Tax Planning",
+          desc: "Strategic structuring of import transactions to optimize your effective tax rate while remaining fully compliant with Turkish and international law.",
+        },
+        {
+          icon: "🔄",
+          title: "Duty Drawback & Refunds",
+          desc: "We identify and process legitimate duty refund claims for re-exported goods, overpaid duties, and eligible relief programs.",
+        },
+        {
+          icon: "📁",
+          title: "Documentation Audit",
+          desc: "Pre-shipment review of all commercial documents to ensure tax compliance before goods arrive at the border — avoiding delays and fines.",
+        },
+        {
+          icon: "🌐",
+          title: "Cross-Border Tax Advisory",
+          desc: "Navigate the tax treaty landscape between trading nations to minimize double taxation and structure transactions efficiently.",
+        },
+      ],
+      faqs: [
+        {
+          q: "What import duties apply to fresh produce entering Turkey?",
+          a: "Turkey applies ad valorem customs duties that vary by HS code and country of origin. Fresh fruits typically fall between 20–45%. Free Trade Agreement benefits may reduce this significantly.",
+        },
+        {
+          q: "Is VAT charged on imported goods into Turkey?",
+          a: "Yes. Imported goods are subject to Turkish VAT (KDV) at the point of customs clearance, typically at 1%, 8%, or 20% depending on the product category.",
+        },
+        {
+          q: "Can import duties be deferred or suspended?",
+          a: "Turkey offers inward processing regimes and bonded warehouse facilities that allow deferral of duties for goods that will be re-exported or further processed.",
+        },
+        {
+          q: "Do I need a tax representative in Turkey?",
+          a: "Non-resident importers are generally required to appoint a customs broker (gümrük müşaviri) licensed in Turkey. ExportsO's network includes vetted, licensed brokers.",
+        },
+      ],
+    },
+    consultancy: {
+      badge: "Trade Consultancy",
+      heroTitle1: "Expert Guidance for",
+      heroTitle2: "Global Trade",
+      heroSubtitle:
+        "From market entry to supply chain optimization — our consultancy turns complex trade challenges into clear, executable strategies.",
+      bookConsultation: "Book a Consultation",
+      whatWeOffer: "What We Offer",
+      consultancyServices: "Consultancy Services",
+      whoWeWorkWith: "Who We Work With",
+      ourClients: "Our Clients",
+      ourApproach: "Our Approach",
+      howWeWork: "How We Work",
+      ctaTitle: "Let's Solve Your Trade Challenge",
+      ctaText:
+        "Every global trade problem has a solution. Our consultants bring the experience and network to find yours — quickly and practically.",
+      startConversation: "Start the Conversation",
+      offerings: [
+        {
+          icon: "🗺️",
+          title: "Market Entry Strategy",
+          desc: "Data-driven analysis of target markets, competition landscape, regulatory requirements, and optimal entry routes — before you commit capital.",
+        },
+        {
+          icon: "⛓️",
+          title: "Supply Chain Design",
+          desc: "End-to-end supply chain mapping, supplier vetting, logistics network design, and cost optimization for cross-border trade operations.",
+        },
+        {
+          icon: "📜",
+          title: "Regulatory Compliance",
+          desc: "Navigate import/export regulations, labelling requirements, certification standards, and customs protocols for markets across Europe and the Middle East.",
+        },
+        {
+          icon: "🤝",
+          title: "Supplier Sourcing",
+          desc: "Leverage our established networks to identify, audit, and onboard vetted suppliers — reducing lead time and quality risk from day one.",
+        },
+        {
+          icon: "📈",
+          title: "Trade Finance Advisory",
+          desc: "Guidance on letters of credit, trade finance instruments, currency hedging, and payment term structuring to protect your cash flow.",
+        },
+        {
+          icon: "🎓",
+          title: "Export Readiness Training",
+          desc: "Workshops and one-on-one coaching for businesses preparing to enter international markets for the first time — practical, not theoretical.",
+        },
+      ],
+      clients: [
+        { label: "SME Exporters", desc: "Businesses making their first foray into international trade." },
+        { label: "Established Importers", desc: "Companies looking to optimize existing cross-border operations." },
+        { label: "Investors", desc: "Capital allocators evaluating trade-related investment opportunities." },
+        { label: "Government Bodies", desc: "Trade promotion organizations seeking market intelligence." },
+      ],
+      process: [
+        {
+          step: "01",
+          title: "Discovery Call",
+          desc: "A focused 60-minute session to understand your business, goals, and the specific trade challenge you want to solve.",
+        },
+        {
+          step: "02",
+          title: "Analysis & Research",
+          desc: "Our team researches your sector, target markets, and competitive landscape, producing a tailored opportunity brief.",
+        },
+        {
+          step: "03",
+          title: "Strategy Presentation",
+          desc: "We present a clear, actionable strategy with prioritized recommendations, timelines, and resource requirements.",
+        },
+        {
+          step: "04",
+          title: "Implementation Support",
+          desc: "Optional hands-on support as you execute — connecting you with our network of logistics, legal, and regulatory partners.",
+        },
+      ],
+    },
+    frequency: {
+      badge: "Shipment Schedules",
+      heroTitle1: "Trade Frequency &",
+      heroTitle2: "Shipping Cycles",
+      heroSubtitle:
+        "Plan your orders around our established shipping windows, seasonal trade cycles, and route frequencies. Predictable logistics — every time.",
+      freightOptions: "Freight Options",
+      shippingRoutes: "Shipping Routes",
+      planAhead: "Plan Ahead",
+      seasonalWindows: "Seasonal Trade Windows",
+      planningTips: "Planning Tips",
+      orderSmarter: "Order Smarter",
+      ctaTitle: "Ready to Schedule a Shipment?",
+      ctaText:
+        "Contact us with your product, quantity, and desired arrival window — we'll confirm the next available vessel and walk you through the process.",
+      contactUs: "Contact Us",
+      frequencyLabel: "Frequency",
+      transitLabel: "Transit Time",
+      bestForLabel: "Best for:",
+      routes: [
+        {
+          from: "Origin Ports",
+          to: "Istanbul / Mersin",
+          mode: "Sea Freight",
+          frequency: "Bi-weekly",
+          transit: "18–25 days",
+          best: "Bulk orders, fresh produce",
+          badge: "Most Popular",
+        },
+        {
+          from: "Origin Airports",
+          to: "Istanbul Airport",
+          mode: "Air Freight",
+          frequency: "Weekly",
+          transit: "3–5 days",
+          best: "Premium, urgent, or perishable",
+          badge: "Fastest",
+        },
+        {
+          from: "Origin (Land Border)",
+          to: "Eastern Turkey",
+          mode: "Road Transport",
+          frequency: "Weekly",
+          transit: "5–10 days",
+          best: "Regional distribution, LCL",
+          badge: null as string | null,
+        },
+      ],
+      seasons: [
+        { months: "Jun – Aug", label: "Summer Peak", desc: "Mango season. Highest shipment volumes for Chaunsa and Sindhri. Book early — capacity fills fast.", color: "bg-amber/15 border-amber/30 text-amber" },
+        { months: "Nov – Mar", label: "Winter Citrus", desc: "Kinnow mandarin season. Steady bi-weekly shipments throughout winter months.", color: "bg-forest/10 border-forest/20 text-forest" },
+        { months: "Sep – Nov", label: "Date Harvest", desc: "Aseel dates and Balochistan pomegranates. Limited seasonal window — plan orders by August.", color: "bg-bark/10 border-bark/20 text-bark" },
+        { months: "Year-Round", label: "Dry Goods & Handicrafts", desc: "Non-perishable goods and artisan products ship on any scheduled vessel with no seasonal constraints.", color: "bg-sand/40 border-sand text-muted" },
+      ],
+      tips: [
+        { icon: "📅", title: "Book 3–4 Weeks Ahead", desc: "For sea freight, confirm your order and documentation at least 3–4 weeks before desired arrival. This covers inspection, loading, and transit time." },
+        { icon: "❄️", title: "Cold-Chain Slots Fill Fast", desc: "Refrigerated container space is limited per vessel. For fresh produce, book reefer slots as early as possible, especially during peak seasons." },
+        { icon: "📄", title: "Documentation Lead Time", desc: "Phytosanitary certificates and Certificates of Origin require 3–7 business days to process. Factor this into your order timeline." },
+        { icon: "🗓️", title: "Avoid Holiday Periods", desc: "Shipping around major public holidays can add 1–2 weeks to transit due to port congestion and reduced staffing. Plan accordingly." },
+      ],
+    },
+    ask: {
+      badge: "Help Center",
+      heroTitle: "Ask Us Anything",
+      heroSubtitle:
+        "Browse answers to the most common questions about our products, pricing, shipping, and how to get started working with ExportsO.",
+      ctaTitle: "Still Have Questions?",
+      ctaText:
+        "Can't find the answer you're looking for? Our team responds to all inquiries within 24 hours.",
+      contactTeam: "Contact Our Team",
+      categories: [
+        {
+          label: "Products & Sourcing",
+          icon: "🍊",
+          faqs: [
+            { q: "What products does ExportsO currently offer?", a: "We currently specialize in premium fresh fruits including Kinnow mandarins, Chaunsa mangoes, Sindhri mangoes, Aseel dates, guava, and pomegranate. We are expanding into handicrafts, home accessories, and decor." },
+            { q: "Where are your products sourced from?", a: "Our fresh produce is sourced from certified farms and orchards across agriculturally rich regions. All suppliers are vetted for quality, food safety compliance, and ethical practices." },
+            { q: "Are your products certified for export?", a: "Yes. All fresh produce is accompanied by Phytosanitary Certificates, Certificates of Origin, and other documents required by Turkish import authorities. Halal certification is available on request." },
+            { q: "Can I request a custom product or variety?", a: "We welcome special requests. If you are looking for a specific product, variety, grade, or packaging configuration, contact our sourcing team and we will assess feasibility." },
+          ],
+        },
+        {
+          label: "Orders & Pricing",
+          icon: "💼",
+          faqs: [
+            { q: "What is the minimum order quantity (MOQ)?", a: "For fresh fruits, the standard minimum is one full pallet (approximately 500–1,000 kg depending on product). Container-load orders receive preferential pricing. Contact us for product-specific MOQs." },
+            { q: "How do I get a price quote?", a: "Submit an inquiry via our Contact page with the product, grade, quantity, and your location. We will respond with a proforma invoice within 24–48 hours." },
+            { q: "What payment terms do you accept?", a: "We accept T/T (bank transfer), Letter of Credit (L/C) at sight, and for established clients, deferred payment terms can be arranged. A 30–50% advance deposit is standard for new buyers." },
+            { q: "Do prices include shipping and duties?", a: "Prices are quoted CIF (Cost, Insurance, Freight) to the destination port by default. Turkish customs duties, VAT, and port handling are the buyer's responsibility unless DDP terms are agreed." },
+          ],
+        },
+        {
+          label: "Shipping & Logistics",
+          icon: "🚢",
+          faqs: [
+            { q: "How long does shipping take?", a: "Sea freight takes approximately 18–25 days to Istanbul/Mersin. Air freight is 3–5 days and is available for urgent or premium shipments at higher cost." },
+            { q: "How is freshness maintained during transit?", a: "All fresh produce is shipped in refrigerated (reefer) containers maintaining 2–8°C. Cold-chain integrity is monitored end-to-end from packing to port arrival." },
+            { q: "Do you handle customs clearance in Turkey?", a: "Our network of licensed customs brokers in Turkey can manage clearance on your behalf. This service is available under DDP (Delivered Duty Paid) terms for established clients." },
+            { q: "Can you deliver directly to our warehouse?", a: "Yes. We offer door-to-door delivery into Turkey under DDP terms. This covers all transport, customs clearance, duties, and final-mile delivery to your specified address." },
+          ],
+        },
+        {
+          label: "Working With Us",
+          icon: "🤝",
+          faqs: [
+            { q: "How do I become a buyer?", a: "Simply reach out via our Contact page. We will arrange an introductory call, discuss your requirements, and issue a proforma invoice for your first order. No long-term commitment required." },
+            { q: "Do you work with small retailers?", a: "Yes, provided minimum order quantities are met. We work with retailers, wholesalers, distributors, importers, and end-buyers of all sizes." },
+            { q: "Do you offer exclusivity agreements?", a: "Regional exclusivity can be negotiated for high-volume, long-term buyers. Contact us to discuss terms and criteria." },
+            { q: "How do I track my shipment?", a: "Once a shipment is dispatched, you receive a Bill of Lading or Air Waybill with a tracking reference. Our team provides proactive updates at key milestones." },
+          ],
+        },
+      ],
+    },
+    industry: {
+      badge: "Sectors We Serve",
+      heroTitle1: "Built for Every",
+      heroTitle2: "Industry",
+      heroSubtitle:
+        "Whether you're a supermarket buyer, a food manufacturer, or a premium gift retailer — ExportsO has the product, documentation, and logistics to serve your sector.",
+      discussRequirements: "Discuss Your Requirements",
+      viewProducts: "View Products",
+      whoWeWorkWith: "Who We Work With",
+      industriesWeServe: "Industries We Serve",
+      whyChooseUs: "Why Choose Us",
+      exportsDifference: "The ExportsO Difference",
+      ctaTitle: "Let's Work Together",
+      ctaText:
+        "Tell us about your business and what you're looking for. We'll match you with the right products, terms, and logistics to make it happen.",
+      getInTouch: "Get in Touch",
+      browseProducts: "Browse Products",
+      stats: [
+        { value: "6+", label: "Industries Served" },
+        { value: "100%", label: "Certified Supply Chain" },
+        { value: "B2B", label: "Focused Approach" },
+        { value: "Custom", label: "Solutions Available" },
+      ],
+      industries: [
+        {
+          icon: "🛒",
+          title: "Retail & Supermarkets",
+          desc: "Premium fresh produce and artisan goods for supermarket chains, specialty grocery stores, and independent retailers seeking differentiated, quality stock.",
+          highlights: ["Pre-packed & bulk formats", "Custom labelling available", "Consistent grading"],
+        },
+        {
+          icon: "🏨",
+          title: "Hospitality & Catering",
+          desc: "Hotels, restaurants, and catering companies demanding the highest quality seasonal fruits for menus, buffets, and gift hampers.",
+          highlights: ["Premium-grade selection", "Flexible order sizes", "Seasonal menus supported"],
+        },
+        {
+          icon: "🏭",
+          title: "Food Manufacturing",
+          desc: "Juice producers, confectionery manufacturers, and food processors sourcing high-Brix fruits and raw ingredients at scale with consistent quality specs.",
+          highlights: ["Industrial-grade volumes", "Custom specs & grades", "Lab reports available"],
+        },
+        {
+          icon: "📦",
+          title: "Wholesale & Distribution",
+          desc: "Importers and distributors building out their product range with premium, traceable goods from established trade corridors.",
+          highlights: ["Container-load pricing", "Flexible Incoterms", "Full documentation"],
+        },
+        {
+          icon: "🛍️",
+          title: "E-Commerce & Gift",
+          desc: "Online retailers and gift box curators sourcing premium dates, artisan crafts, and specialty fruits for high-value gifting and DTC channels.",
+          highlights: ["Premium packaging", "Small batch possible", "Unique product stories"],
+        },
+        {
+          icon: "🏗️",
+          title: "Corporate & Institutional",
+          desc: "Corporate gift programs, government procurement, and institutional buyers requiring certified, traceable goods with robust documentation.",
+          highlights: ["Bulk corporate orders", "Halal certified", "Full audit trail"],
+        },
+      ],
+      differentiators: [
+        { title: "Direct Farm Relationships", desc: "We source from farms we know personally — giving you traceability, quality consistency, and supply security that intermediaries can't offer." },
+        { title: "Full Documentation", desc: "Every shipment comes with a complete documentation package: Certificate of Origin, Phytosanitary, Commercial Invoice, and Packing List." },
+        { title: "Flexible Commercial Terms", desc: "From FOB to DDP, we adapt to your business model. We work within your procurement processes, not against them." },
+        { title: "Dedicated Account Management", desc: "Every client gets a dedicated contact who understands your sector and requirements — proactive communication, not reactive support." },
+      ],
+    },
     footer: {
       tagline: "Pure Quality, Fast Delivery, Full Confidence.",
       quickLinks: "Quick Links",
@@ -437,6 +833,402 @@ export const translations = {
       operationalRegions: "Operasyonel Bölgeler",
       operationalText:
         "Birincil ithalat ve dağıtım operasyonlarımız Türk pazarına yönelik olmak üzere küresel kaynak ağlarıyla faaliyet gösteriyoruz.",
+    },
+    invest: {
+      badge: "Yatırım Fırsatları",
+      heroTitle: "Küresel Ticaretle Büyüyün",
+      heroSubtitle:
+        "ExportsO, yüksek büyümeli uluslararası ticarette yapılandırılmış yatırım ortaklıkları sunar — gerçek varlıklar, gerçek sevkiyatlar ve şeffaf raporlama ile desteklenir.",
+      requestPack: "Yatırım Paketi İste",
+      whereCapitalWorks: "Sermayenizin Çalıştığı Yer",
+      investmentSectors: "Yatırım Sektörleri",
+      howItWorks: "Nasıl Çalışır",
+      investmentProcess: "Yatırım Süreci",
+      ctaTitle: "Yatırıma Hazır mısınız?",
+      ctaText:
+        "Gerçek ticareti, gerçek ürünleri ve gerçek getirileri destekleyen büyüyen bir yatırımcı ağına katılın. Ortaklar konusunda seçiciyiz — sohbeti başlatmak için bize ulaşın.",
+      getInTouch: "İletişime Geçin",
+      stats: [
+        { value: "4+", label: "Aktif Ticaret Güzergahı" },
+        { value: "100%", label: "Zamanında Teslimat Oranı" },
+        { value: "₺0", label: "Ödenmemiş Temerrüt" },
+        { value: "2x", label: "Hedef Hacim Büyümesi" },
+      ],
+      opportunities: [
+        {
+          icon: "🌿",
+          title: "Tarımsal Emtialar",
+          desc: "Premium taze ürünlerin tedarik ve dağıtımına yatırım yapın — yıl boyu döngüler ve artan ihracat hacimleriyle dayanıklı, yüksek talep gören bir sektör.",
+          return: "%12–18 öngörülen",
+        },
+        {
+          icon: "🏺",
+          title: "El Sanatları Ticareti",
+          desc: "Avrupa ve Türk pazarlarına özel el yapımı ürünlerin ithalatını destekleyin. Düşük rekabet, yüksek marj, kültürel farklılaşma.",
+          return: "%15–22 öngörülen",
+        },
+        {
+          icon: "🚢",
+          title: "Lojistik Altyapı",
+          desc: "Her sevkiyatın temelini oluşturan soğuk zincir lojistiği ve depolama kapasitesine ortak olun — istikrarlı, uzun vadeli getirili temel altyapı.",
+          return: "%8–14 öngörülen",
+        },
+        {
+          icon: "🌍",
+          title: "Pazar Genişlemesi",
+          desc: "Avrupa ve Orta Doğu'daki yeni hedef pazarlara coğrafi genişlememizi finanse edin, mevcut tedarik zinciri gücümüzü artırın.",
+          return: "%20–30 öngörülen",
+        },
+      ],
+      steps: [
+        {
+          step: "01",
+          title: "İlk Danışma",
+          desc: "Yatırım ekibimizle bir görüşme planlayın. Operasyonlarımızı, finansallarımızı ve mevcut fırsatları ayrıntılı olarak aktarıyoruz.",
+        },
+        {
+          step: "02",
+          title: "Durum Tespiti Paketi",
+          desc: "Tedarik zinciri verileri, öngörülen getiriler, risk analizi ve hukuki yapı içeren kapsamlı bir yatırım dosyası alın.",
+        },
+        {
+          step: "03",
+          title: "Şart Anlaşması",
+          desc: "Yatırım büyüklüğü, süresi ve getiri yapısı üzerinde mutabık kalırız. Tüm anlaşmalar Türk ticaret hukukuna tabidir.",
+        },
+        {
+          step: "04",
+          title: "Aktif Ortaklık",
+          desc: "Sermayeniz çalışmaya başlar. Düzenli raporlama, sevkiyat güncellemeleri ve üç aylık finansal tablolar alırsınız.",
+        },
+      ],
+    },
+    tax: {
+      badge: "Vergi ve Gümrük Hizmetleri",
+      heroTitle1: "Daha Akıllı Ticaret,",
+      heroTitle2: "Daha Az Vergi",
+      heroSubtitle:
+        "İthalat vergileri, KDV, gümrük tarifeleri ve sınır ötesi vergi uyumu konusunda uzman rehberlik — tam olarak ödemeniz gerekeni ödeyin, bir kuruş fazlasını değil.",
+      tags: ["İthalat Vergileri", "KDV Uyumu", "HS Sınıflandırması", "Vergi İadesi"],
+      whatWeCover: "Neler Kapsıyoruz",
+      ourTaxServices: "Vergi Hizmetlerimiz",
+      servicesSubtitle:
+        "Türkiye'de ve çevresinde faaliyet gösteren ithalatçılar, ihracatçılar ve sınır ötesi tüccarlar için uçtan uca vergi desteği.",
+      commonQuestions: "Sık Sorulan Sorular",
+      taxFaq: "Vergi SSS",
+      ctaTitle: "Vergi Netliğine İhtiyacınız Var mı?",
+      ctaText:
+        "Ekibimiz karmaşıklığı üstlenir, siz ticaretinizi büyütmeye odaklanırsınız. Ücretsiz vergi değerlendirmesi için bize ulaşın.",
+      bookConsultation: "Vergi Danışması Rezervasyonu",
+      services: [
+        {
+          icon: "📋",
+          title: "İthalat Vergisi Sınıflandırması",
+          desc: "Ürünleriniz için doğru HS tarife kodlarını belirleyerek hatalı sınıflandırma cezalarından kaçınmanızı sağlıyoruz.",
+        },
+        {
+          icon: "🧾",
+          title: "KDV ve Gümrük Uyumu",
+          desc: "İthal edilen mallar için Türk KDV yükümlülükleri, ertelenmiş KDV planları ve uygun işlemler için muafiyet hakkında tam rehberlik.",
+        },
+        {
+          icon: "📊",
+          title: "Ticaret Vergi Planlaması",
+          desc: "Türk ve uluslararası hukuka tam uyum sağlarken efektif vergi oranınızı optimize etmek için ithalat işlemlerinin stratejik yapılandırılması.",
+        },
+        {
+          icon: "🔄",
+          title: "Vergi İadesi ve Geri Ödemeler",
+          desc: "Yeniden ihraç edilen mallar, fazla ödenen vergiler ve uygun muafiyet programları için meşru vergi iadesi taleplerini tespit edip işliyoruz.",
+        },
+        {
+          icon: "📁",
+          title: "Belge Denetimi",
+          desc: "Mallar sınıra ulaşmadan önce tüm ticari belgelerin ön sevkiyat incelemesi — gecikmeleri ve cezaları önler.",
+        },
+        {
+          icon: "🌐",
+          title: "Sınır Ötesi Vergi Danışmanlığı",
+          desc: "Çifte vergilendirmeyi minimize etmek ve işlemleri verimli yapılandırmak için ticaret ülkeleri arasındaki vergi anlaşması ortamında yol gösteriyoruz.",
+        },
+      ],
+      faqs: [
+        {
+          q: "Türkiye'ye giren taze ürünlere hangi ithalat vergileri uygulanır?",
+          a: "Türkiye, HS koduna ve menşe ülkeye göre değişen ad valorem gümrük vergileri uygular. Taze meyveler genellikle %20–45 arasında yer alır. Serbest Ticaret Anlaşması avantajları bunu önemli ölçüde azaltabilir.",
+        },
+        {
+          q: "Türkiye'ye ithal edilen mallardan KDV alınır mı?",
+          a: "Evet. İthal edilen mallar, gümrük giriş noktasında ürün kategorisine bağlı olarak genellikle %1, %8 veya %20 oranında Türk KDV'sine (KDV) tabidir.",
+        },
+        {
+          q: "İthalat vergileri ertelenebilir veya askıya alınabilir mi?",
+          a: "Türkiye, yeniden ihraç edilecek veya daha ileri işlenecek mallar için vergi ertelemesine olanak tanıyan dahili işleme rejimleri ve antrepo tesisleri sunmaktadır.",
+        },
+        {
+          q: "Türkiye'de bir vergi temsilcisine ihtiyacım var mı?",
+          a: "Yerleşik olmayan ithalatçıların genellikle Türkiye'de lisanslı bir gümrük müşaviri ataması gerekir. ExportsO'nun ağı incelenmiş, lisanslı aracılar içermektedir.",
+        },
+      ],
+    },
+    consultancy: {
+      badge: "Ticaret Danışmanlığı",
+      heroTitle1: "Küresel Ticaret için",
+      heroTitle2: "Uzman Rehberlik",
+      heroSubtitle:
+        "Pazar girişinden tedarik zinciri optimizasyonuna — danışmanlığımız karmaşık ticaret zorluklarını net, uygulanabilir stratejilere dönüştürür.",
+      bookConsultation: "Danışma Rezervasyonu",
+      whatWeOffer: "Ne Sunuyoruz",
+      consultancyServices: "Danışmanlık Hizmetleri",
+      whoWeWorkWith: "Kimlerle Çalışıyoruz",
+      ourClients: "Müşterilerimiz",
+      ourApproach: "Yaklaşımımız",
+      howWeWork: "Nasıl Çalışıyoruz",
+      ctaTitle: "Ticaret Sorununuzu Birlikte Çözelim",
+      ctaText:
+        "Her küresel ticaret sorununun bir çözümü vardır. Danışmanlarımız sizinkini hızlıca ve pratik biçimde bulmak için gereken deneyim ve ağa sahiptir.",
+      startConversation: "Sohbeti Başlat",
+      offerings: [
+        {
+          icon: "🗺️",
+          title: "Pazar Giriş Stratejisi",
+          desc: "Sermayenizi bağlamadan önce hedef pazarların, rekabet ortamının, düzenleyici gerekliliklerin ve optimal giriş yollarının veri odaklı analizi.",
+        },
+        {
+          icon: "⛓️",
+          title: "Tedarik Zinciri Tasarımı",
+          desc: "Sınır ötesi ticaret operasyonları için uçtan uca tedarik zinciri haritalama, tedarikçi denetimi, lojistik ağ tasarımı ve maliyet optimizasyonu.",
+        },
+        {
+          icon: "📜",
+          title: "Düzenleyici Uyum",
+          desc: "Avrupa ve Orta Doğu pazarları için ithalat/ihracat düzenlemeleri, etiketleme gereklilikleri, sertifika standartları ve gümrük protokollerinde rehberlik.",
+        },
+        {
+          icon: "🤝",
+          title: "Tedarikçi Kaynağı",
+          desc: "Yerleşik ağlarımızdan yararlanarak incelenmiş tedarikçileri belirleyin, denetleyin ve dahil edin — başından itibaren teslim süresini ve kalite riskini azaltın.",
+        },
+        {
+          icon: "📈",
+          title: "Ticaret Finansmanı Danışmanlığı",
+          desc: "Nakit akışınızı korumak için akreditifler, ticaret finansmanı araçları, döviz riskinden korunma ve ödeme vadesi yapılandırması konusunda rehberlik.",
+        },
+        {
+          icon: "🎓",
+          title: "İhracat Hazırlık Eğitimi",
+          desc: "Uluslararası pazarlara ilk kez girmek üzere olan işletmeler için atölye çalışmaları ve birebir koçluk — pratik, teorik değil.",
+        },
+      ],
+      clients: [
+        { label: "KOBİ İhracatçıları", desc: "Uluslararası ticarete ilk adımını atan işletmeler." },
+        { label: "Köklü İthalatçılar", desc: "Mevcut sınır ötesi operasyonlarını optimize etmek isteyen şirketler." },
+        { label: "Yatırımcılar", desc: "Ticaretle ilgili yatırım fırsatlarını değerlendiren sermaye tahsisçileri." },
+        { label: "Kamu Kurumları", desc: "Piyasa istihbaratı arayan ticaret geliştirme kuruluşları." },
+      ],
+      process: [
+        {
+          step: "01",
+          title: "Keşif Görüşmesi",
+          desc: "İşinizi, hedeflerinizi ve çözmek istediğiniz spesifik ticaret sorununu anlamak için odaklı 60 dakikalık bir oturum.",
+        },
+        {
+          step: "02",
+          title: "Analiz ve Araştırma",
+          desc: "Ekibimiz sektörünüzü, hedef pazarlarınızı ve rekabet ortamını araştırarak özelleştirilmiş bir fırsat özeti üretir.",
+        },
+        {
+          step: "03",
+          title: "Strateji Sunumu",
+          desc: "Önceliklendirilmiş öneriler, zaman çizelgeleri ve kaynak gereklilikleriyle açık, eyleme dönüştürülebilir bir strateji sunarız.",
+        },
+        {
+          step: "04",
+          title: "Uygulama Desteği",
+          desc: "Uygularken isteğe bağlı pratik destek — sizi lojistik, hukuk ve düzenleyici ortaklarımızın ağıyla buluşturuyoruz.",
+        },
+      ],
+    },
+    frequency: {
+      badge: "Sevkiyat Takvimi",
+      heroTitle1: "Ticaret Sıklığı ve",
+      heroTitle2: "Nakliye Döngüleri",
+      heroSubtitle:
+        "Siparişlerinizi kurulu nakliye pencerelerimize, mevsimsel ticaret döngülerimize ve güzergah sıklıklarımıza göre planlayın. Her seferinde öngörülebilir lojistik.",
+      freightOptions: "Nakliye Seçenekleri",
+      shippingRoutes: "Nakliye Güzergahları",
+      planAhead: "Önceden Planlayın",
+      seasonalWindows: "Mevsimsel Ticaret Pencereleri",
+      planningTips: "Planlama İpuçları",
+      orderSmarter: "Daha Akıllı Sipariş",
+      ctaTitle: "Sevkiyat Planlamaya Hazır mısınız?",
+      ctaText:
+        "Ürün, miktar ve istediğiniz varış penceresiyle bize ulaşın — bir sonraki uygun gemiyi onaylayıp süreci adım adım anlatacağız.",
+      contactUs: "Bize Ulaşın",
+      frequencyLabel: "Sıklık",
+      transitLabel: "Transit Süresi",
+      bestForLabel: "En uygun:",
+      routes: [
+        {
+          from: "Çıkış Limanları",
+          to: "İstanbul / Mersin",
+          mode: "Deniz Taşımacılığı",
+          frequency: "İki haftada bir",
+          transit: "18–25 gün",
+          best: "Toplu sipariş, taze ürün",
+          badge: "En Popüler",
+        },
+        {
+          from: "Çıkış Havalimanları",
+          to: "İstanbul Havalimanı",
+          mode: "Hava Taşımacılığı",
+          frequency: "Haftalık",
+          transit: "3–5 gün",
+          best: "Premium, acil veya bozulabilir",
+          badge: "En Hızlı",
+        },
+        {
+          from: "Çıkış (Kara Sınırı)",
+          to: "Doğu Türkiye",
+          mode: "Karayolu Taşımacılığı",
+          frequency: "Haftalık",
+          transit: "5–10 gün",
+          best: "Bölgesel dağıtım, LCL",
+          badge: null as string | null,
+        },
+      ],
+      seasons: [
+        { months: "Haz – Ağu", label: "Yaz Zirvesi", desc: "Mango sezonu. Chaunsa ve Sindhri için en yüksek sevkiyat hacimleri. Erken rezervasyon yapın — kapasite hızlı doluyor.", color: "bg-amber/15 border-amber/30 text-amber" },
+        { months: "Kas – Mar", label: "Kış Turunçgilleri", desc: "Kinnow mandarin sezonu. Kış boyunca düzenli iki haftada bir sevkiyat.", color: "bg-forest/10 border-forest/20 text-forest" },
+        { months: "Eyl – Kas", label: "Hurma Hasadı", desc: "Aseel hurmaları ve Beluçistan narları. Sınırlı mevsimsel pencere — siparişleri Ağustos'a kadar planlayın.", color: "bg-bark/10 border-bark/20 text-bark" },
+        { months: "Yıl Boyu", label: "Kuru Mal ve El Sanatları", desc: "Bozulmayan mallar ve zanaatkâr ürünler herhangi bir planlı gemide mevsimsel kısıt olmaksızın nakledilebilir.", color: "bg-sand/40 border-sand text-muted" },
+      ],
+      tips: [
+        { icon: "📅", title: "3–4 Hafta Önceden Rezervasyon", desc: "Deniz taşımacılığı için siparişinizi ve belgelerinizi istenen varıştan en az 3–4 hafta önce onaylayın. Bu süre denetim, yükleme ve transit zamanını kapsar." },
+        { icon: "❄️", title: "Soğuk Zincir Slotları Hızlı Dolar", desc: "Gemi başına soğutmalı konteyner alanı sınırlıdır. Taze ürünler için, özellikle yoğun sezonda reefer slotlarını mümkün olduğunca erken rezerve edin." },
+        { icon: "📄", title: "Belge Hazırlık Süresi", desc: "Bitki sağlık sertifikaları ve Menşe Şahadetnameleri 3–7 iş günü gerektirmektedir. Sipariş zaman çizelgenize dahil edin." },
+        { icon: "🗓️", title: "Tatil Dönemlerinden Kaçının", desc: "Büyük resmi tatil çevresinde nakliye, liman yoğunluğu ve azalan personel nedeniyle transit süresine 1–2 hafta ekleyebilir. Buna göre planlayın." },
+      ],
+    },
+    ask: {
+      badge: "Yardım Merkezi",
+      heroTitle: "Bize Her Şeyi Sorun",
+      heroSubtitle:
+        "Ürünlerimiz, fiyatlandırma, nakliye ve ExportsO ile çalışmaya başlama hakkındaki en sık sorulan soruların yanıtlarına göz atın.",
+      ctaTitle: "Hâlâ Sorunuz mu Var?",
+      ctaText:
+        "Aradığınız yanıtı bulamıyor musunuz? Ekibimiz tüm sorulara 24 saat içinde yanıt verir.",
+      contactTeam: "Ekibimizle İletişime Geçin",
+      categories: [
+        {
+          label: "Ürünler ve Kaynak",
+          icon: "🍊",
+          faqs: [
+            { q: "ExportsO şu anda hangi ürünleri sunuyor?", a: "Şu anda Kinnow mandarinleri, Chaunsa ve Sindhri mangolar, Aseel hurmaları, guava ve nar dahil olmak üzere premium taze meyvelerde uzmanlaşıyoruz. El sanatları, ev aksesuarları ve dekora doğru genişliyoruz." },
+            { q: "Ürünleriniz nereden temin ediliyor?", a: "Taze ürünlerimiz, tarımsal açıdan zengin bölgelerdeki sertifikalı çiftliklerden ve bahçelerden temin edilmektedir. Tüm tedarikçiler kalite, gıda güvenliği uyumu ve etik uygulamalar açısından denetlenmektedir." },
+            { q: "Ürünleriniz ihracat için sertifikalı mı?", a: "Evet. Tüm taze ürünlere Türk ithalat makamlarının talep ettiği Bitki Sağlık Sertifikası, Menşe Şahadetnamesi ve diğer belgeler eşlik etmektedir. Talep üzerine Helal sertifikası da mevcuttur." },
+            { q: "Özel ürün veya çeşit talep edebilir miyim?", a: "Özel talepleri memnuniyetle karşılıyoruz. Belirli bir ürün, çeşit, kalite veya ambalaj konfigürasyonu arıyorsanız kaynak ekibimizle iletişime geçin, fizibiliteyi değerlendireceğiz." },
+          ],
+        },
+        {
+          label: "Siparişler ve Fiyatlandırma",
+          icon: "💼",
+          faqs: [
+            { q: "Minimum sipariş miktarı (MOQ) nedir?", a: "Taze meyveler için standart minimum bir tam palet (ürüne bağlı olarak yaklaşık 500–1.000 kg) tutarındadır. Konteyner yükü siparişler tercihli fiyatlandırma alır. Ürüne özel MOQ için bize ulaşın." },
+            { q: "Fiyat teklifi nasıl alırım?", a: "Ürün, kalite, miktar ve konumunuzla birlikte İletişim sayfamız aracılığıyla bir talep gönderin. 24–48 saat içinde proforma fatura ile yanıt vereceğiz." },
+            { q: "Hangi ödeme koşullarını kabul ediyorsunuz?", a: "T/T (banka havalesi), görüldüğünde Akreditif (L/C) kabul ediyoruz; köklü müşteriler için ertelenmiş ödeme koşulları ayarlanabilir. Yeni alıcılar için %30–50 avans standart uygulamadır." },
+            { q: "Fiyatlara nakliye ve vergiler dahil mi?", a: "Fiyatlar varsayılan olarak varış limanına CIF (Maliyet, Sigorta, Navlun) olarak belirtilir. Türk gümrük vergileri, KDV ve liman işlemleri, DDP koşulları üzerinde anlaşılmadıkça alıcının sorumluluğundadır." },
+          ],
+        },
+        {
+          label: "Nakliye ve Lojistik",
+          icon: "🚢",
+          faqs: [
+            { q: "Nakliye ne kadar sürer?", a: "Deniz taşımacılığı İstanbul/Mersin'e yaklaşık 18–25 gün sürer. Hava taşımacılığı 3–5 gündür ve daha yüksek maliyetle acil veya premium sevkiyatlar için mevcuttur." },
+            { q: "Transit süresince tazelik nasıl korunur?", a: "Tüm taze ürünler 2–8°C'de soğutmalı (reefer) konteynerlerde nakliyeye tabi tutulmaktadır. Soğuk zincir bütünlüğü ambalajdan liman varışına kadar uçtan uca izlenmektedir." },
+            { q: "Türkiye'de gümrük işlemlerini yürütüyor musunuz?", a: "Türkiye'deki lisanslı gümrük müşavirlerimiz ağı, gümrük işlemlerini sizin adınıza yönetebilir. Bu hizmet, köklü müşteriler için DDP (Vergi Ödenmiş Teslim) koşullarında mevcuttur." },
+            { q: "Doğrudan depomuzun kapısına teslimat yapabilir misiniz?", a: "Evet. Türkiye'ye DDP koşullarında kapıdan kapıya teslimat sunuyoruz. Bu, belirttiğiniz adrese kadar tüm nakliye, gümrük işlemleri, vergiler ve son mil teslimatını kapsamaktadır." },
+          ],
+        },
+        {
+          label: "Bizimle Çalışmak",
+          icon: "🤝",
+          faqs: [
+            { q: "Alıcı nasıl olurum?", a: "Sadece İletişim sayfamız aracılığıyla bize ulaşın. Bir tanışma araması ayarlayacak, gereksinimlerinizi tartışacak ve ilk siparişiniz için proforma fatura düzenleyeceğiz. Uzun vadeli taahhüt gerekmez." },
+            { q: "Küçük perakendecilerle çalışıyor musunuz?", a: "Evet, minimum sipariş miktarları karşılandığı sürece. Her ölçekten perakendeci, toptancı, distribütör, ithalatçı ve son alıcıyla çalışıyoruz." },
+            { q: "Münhasırlık anlaşması sunuyor musunuz?", a: "Yüksek hacimli, uzun vadeli alıcılar için bölgesel münhasırlık müzakere edilebilir. Koşullar ve kriterler için bize ulaşın." },
+            { q: "Sevkiyatımı nasıl takip ederim?", a: "Bir sevkiyat yola çıktığında, takip referansı içeren bir Konşimento veya Hava Yük Senedi alırsınız. Ekibimiz kilit noktalarda proaktif güncelleme sağlar." },
+          ],
+        },
+      ],
+    },
+    industry: {
+      badge: "Hizmet Ettiğimiz Sektörler",
+      heroTitle1: "Her Sektör için",
+      heroTitle2: "Yapılandırıldı",
+      heroSubtitle:
+        "Süpermarket alıcısı, gıda üreticisi veya premium hediye perakendecisi olun — ExportsO'nun sektörünüze hizmet etmek için ürünü, belgeleri ve lojistiği mevcuttur.",
+      discussRequirements: "Gereksinimlerinizi Tartışın",
+      viewProducts: "Ürünleri Gör",
+      whoWeWorkWith: "Kimlerle Çalışıyoruz",
+      industriesWeServe: "Hizmet Ettiğimiz Sektörler",
+      whyChooseUs: "Neden Bizi Tercih Edin",
+      exportsDifference: "ExportsO Farkı",
+      ctaTitle: "Birlikte Çalışalım",
+      ctaText:
+        "İşinizi ve ne aradığınızı bize anlatın. Sizi hayata geçirmek için doğru ürünler, koşullar ve lojistikle buluşturalım.",
+      getInTouch: "İletişime Geçin",
+      browseProducts: "Ürünlere Göz At",
+      stats: [
+        { value: "6+", label: "Hizmet Edilen Sektör" },
+        { value: "100%", label: "Sertifikalı Tedarik Zinciri" },
+        { value: "B2B", label: "Odaklı Yaklaşım" },
+        { value: "Özel", label: "Çözümler Mevcut" },
+      ],
+      industries: [
+        {
+          icon: "🛒",
+          title: "Perakende ve Süpermarketler",
+          desc: "Farklılaşmış, kaliteli stok arayan süpermarket zincirleri, özel bakkallar ve bağımsız perakendeciler için premium taze ürünler ve zanaatkâr mallar.",
+          highlights: ["Hazır paket ve dökme formatlar", "Özel etiketleme imkânı", "Tutarlı kalite sınıfı"],
+        },
+        {
+          icon: "🏨",
+          title: "Konaklama ve Yemek Hizmetleri",
+          desc: "Menüler, büfeler ve hediye sepetleri için en yüksek kalitede mevsimlik meyvelere ihtiyaç duyan oteller, restoranlar ve yemek şirketleri.",
+          highlights: ["Premium kalite seçimi", "Esnek sipariş büyüklüğü", "Mevsimsel menü desteği"],
+        },
+        {
+          icon: "🏭",
+          title: "Gıda Üretimi",
+          desc: "Tutarlı kalite özellikleriyle ölçekte yüksek Brix meyveler ve ham maddeler temin eden meyve suyu üreticileri, şekerleme imalatçıları ve gıda işlemcileri.",
+          highlights: ["Endüstriyel ölçekli hacimler", "Özel özellikler ve kalite sınıfı", "Laboratuvar raporları mevcut"],
+        },
+        {
+          icon: "📦",
+          title: "Toptan Satış ve Dağıtım",
+          desc: "Köklü ticaret güzergahlarından premium, izlenebilir ürünlerle ürün yelpazelerini genişleten ithalatçılar ve distribütörler.",
+          highlights: ["Konteyner yükü fiyatlandırması", "Esnek Incoterms", "Tam belgeleme"],
+        },
+        {
+          icon: "🛍️",
+          title: "E-Ticaret ve Hediye",
+          desc: "Yüksek değerli hediye ve DTC kanalları için premium hurma, zanaatkâr el işleri ve özel meyveler temin eden çevrimiçi perakendeciler ve hediye kutusu küratörleri.",
+          highlights: ["Premium ambalaj", "Küçük lot mümkün", "Eşsiz ürün hikayeleri"],
+        },
+        {
+          icon: "🏗️",
+          title: "Kurumsal ve Resmi",
+          desc: "Güçlü belgelemeye sahip sertifikalı, izlenebilir mallara ihtiyaç duyan kurumsal hediye programları, devlet alımları ve kurumsal alıcılar.",
+          highlights: ["Toplu kurumsal siparişler", "Helal sertifikalı", "Tam denetim izi"],
+        },
+      ],
+      differentiators: [
+        { title: "Doğrudan Çiftlik İlişkileri", desc: "Şahsen tanıdığımız çiftliklerden tedarik ederek aracıların sunamayacağı izlenebilirlik, kalite tutarlılığı ve arz güvenliği sağlıyoruz." },
+        { title: "Tam Belgeleme", desc: "Her sevkiyata eksiksiz belge paketi eşlik eder: Menşe Şahadetnamesi, Bitki Sağlık Sertifikası, Ticari Fatura ve Çeki Listesi." },
+        { title: "Esnek Ticari Koşullar", desc: "FOB'dan DDP'ye iş modelinize uyum sağlarız. Satın alma süreçlerinizde yanınızda çalışırız, karşınızda değil." },
+        { title: "Özel Hesap Yönetimi", desc: "Her müşteri, sektörünü ve gereksinimlerinizi anlayan özel bir kişiyle buluşur — proaktif iletişim, reaktif değil." },
+      ],
     },
     footer: {
       tagline: "Saf Kalite, Hızlı Teslimat, Tam Güven.",
