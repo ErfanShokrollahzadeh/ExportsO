@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Geist, Playfair_Display } from "next/font/google";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import FloatingButtons from "./components/FloatingButtons";
 import { LanguageProvider } from "./context/LanguageContext";
 import "./globals.css";
 
@@ -35,6 +36,7 @@ export default function RootLayout({
           <Header />
           <main>{children}</main>
           <Footer />
+          <FloatingButtons />
         </LanguageProvider>
       </body>
     </html>
