@@ -22,6 +22,50 @@ export default function Header() {
     { href: "/contact", label: T.nav.contact },
   ];
 
+  const authLinks = [
+    {
+      href: "/login",
+      label: T.nav.login,
+      variant: "ghost" as const,
+      icon: (
+        <svg
+          className="w-4 h-4"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+          <polyline points="10 17 15 12 10 7" />
+          <line x1="15" y1="12" x2="3" y2="12" />
+        </svg>
+      ),
+    },
+    {
+      href: "/signup",
+      label: T.nav.signup,
+      variant: "solid" as const,
+      icon: (
+        <svg
+          className="w-4 h-4"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M12 5a4 4 0 1 1-4 4" />
+          <circle cx="12" cy="9" r="4" />
+          <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
+          <path d="M9 13h6" />
+        </svg>
+      ),
+    },
+  ];
+
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
@@ -165,6 +209,27 @@ export default function Header() {
               {T.nav.getInTouch}
             </Link>
 
+            <div className="hidden md:flex items-center gap-2">
+              {authLinks.map(({ href, label, icon, variant }) => {
+                const active = pathname === href;
+                const base =
+                  "inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full transition-all duration-200 border";
+                const solid =
+                  "bg-gradient-to-r from-forest to-forest-mid text-cream border-forest shadow-md hover:shadow-lg";
+                const ghost = scrolled
+                  ? "border-sand/70 text-bark/80 hover:text-forest hover:border-forest/40 bg-white/80"
+                  : "border-white/20 text-cream/90 hover:bg-white/10";
+                const activeRing = active ? "ring-2 ring-amber/60" : "";
+                const classes = [base, variant === "solid" ? solid : ghost, activeRing].join(" ");
+                return (
+                  <Link key={href} href={href} className={classes} aria-label={label}>
+                    {icon}
+                    <span>{label}</span>
+                  </Link>
+                );
+              })}
+            </div>
+
             {/* Mobile hamburger */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
@@ -210,6 +275,24 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+
+          <div className="grid grid-cols-2 gap-3 py-4">
+            {authLinks.map(({ href, label, icon, variant }) => (
+              <Link
+                key={href}
+                href={href}
+                onClick={() => setMenuOpen(false)}
+                className={`flex items-center justify-center gap-2 text-sm font-semibold px-3 py-2 rounded-lg border transition-all ${
+                  variant === "solid"
+                    ? "bg-forest text-cream border-forest shadow-md"
+                    : "border-sand/60 text-bark/70 hover:border-forest/50"
+                }`}
+              >
+                {icon}
+                <span>{label}</span>
+              </Link>
+            ))}
+          </div>
 
           {/* Mobile language toggle */}
           <div className="flex gap-2 py-3 border-b border-sand/50">
