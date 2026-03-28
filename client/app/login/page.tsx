@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../lib/translations";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000";
 
@@ -15,6 +17,8 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
+  const { lang } = useLanguage();
+  const T = translations[lang].loginPage;
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -67,20 +71,20 @@ export default function LoginPage() {
           <div className="bg-white/60 border border-sand/60 rounded-2xl shadow-xl backdrop-blur p-8 lg:p-10">
             <div className="flex items-center justify-between mb-6">
               <div>
-                <p className="text-sm uppercase tracking-[0.2em] text-bark/60 font-semibold">Log in</p>
+                <p className="text-sm uppercase tracking-[0.2em] text-bark/60 font-semibold">{T.heading}</p>
                 <h1 className="text-3xl lg:text-4xl font-bold mt-1" style={{ fontFamily: "var(--font-playfair)" }}>
-                  Welcome back
+                  {T.title}
                 </h1>
               </div>
               <span className="px-3 py-1 rounded-full bg-forest/10 text-forest text-xs font-semibold border border-forest/20">
-                Secure Access
+                {T.secure}
               </span>
             </div>
 
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="space-y-1">
                 <label className="text-sm font-semibold text-bark/80" htmlFor="username">
-                  Username
+                  {T.username}
                 </label>
                 <input
                   id="username"
@@ -96,7 +100,7 @@ export default function LoginPage() {
 
               <div className="space-y-1">
                 <label className="text-sm font-semibold text-bark/80" htmlFor="password">
-                  Password
+                  {T.password}
                 </label>
                 <input
                   id="password"
@@ -119,7 +123,7 @@ export default function LoginPage() {
                 disabled={loading}
                 className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-linear-to-r from-forest to-forest-mid text-cream font-semibold px-4 py-3 shadow-lg hover:shadow-xl transition-all disabled:opacity-70"
               >
-                {loading ? "Authenticating..." : "Log in"}
+                {loading ? "Authenticating..." : T.cta}
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14" />
                   <path d="m12 5 7 7-7 7" />
@@ -128,24 +132,22 @@ export default function LoginPage() {
             </form>
 
             <p className="text-sm text-bark/70 mt-4">
-              Need an account?{" "}
+              {T.needAccount}{" "}
               <Link href="/signup" className="font-semibold text-forest hover:text-forest-mid">
-                Create one
+                {T.createOne}
               </Link>
             </p>
           </div>
 
           <div className="space-y-4">
             <div className="p-6 rounded-2xl bg-forest text-cream shadow-xl border border-forest/50">
-              <p className="text-sm uppercase tracking-[0.2em] text-cream/80 font-semibold">Why log in</p>
+              <p className="text-sm uppercase tracking-[0.2em] text-cream/80 font-semibold">{T.whyLabel}</p>
               <h2 className="text-2xl font-bold mt-2" style={{ fontFamily: "var(--font-playfair)" }}>
-                Keep your trade flow connected
+                {T.whyTitle}
               </h2>
-              <p className="text-cream/80 mt-3">
-                Access inquiries, track timelines, and collaborate with our sourcing desk — all from a clean, secure workspace.
-              </p>
+              <p className="text-cream/80 mt-3">{T.whyBody}</p>
               <div className="mt-4 grid sm:grid-cols-2 gap-3">
-                {["Shipment updates", "Secure documents", "Partner chat", "Faster approvals"].map((item) => (
+                {T.features.map((item) => (
                   <div key={item} className="flex items-center gap-2 bg-white/10 rounded-lg px-3 py-2 text-sm">
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                       <path d="m5 12 4 4L19 7" />
@@ -160,8 +162,8 @@ export default function LoginPage() {
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center text-forest font-semibold">GT</div>
                 <div>
-                  <p className="text-sm font-semibold text-bark">Priority support</p>
-                  <p className="text-sm text-bark/70">Talk to our team once you're in the portal.</p>
+                  <p className="text-sm font-semibold text-bark">{T.supportTitle}</p>
+                  <p className="text-sm text-bark/70">{T.supportNote}</p>
                 </div>
               </div>
             </div>
