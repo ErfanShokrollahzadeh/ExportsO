@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+.env
+.env.*
+.venv/
+
+# Django
+/staticfiles/
+/media/
+
+# Node/Next.js
+node_modules/
+.next/
+out/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
