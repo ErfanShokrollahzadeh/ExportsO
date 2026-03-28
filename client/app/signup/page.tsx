@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../lib/translations";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000";
 
@@ -22,11 +24,13 @@ export default function SignupPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
+  const { lang } = useLanguage();
+  const T = translations[lang].signupPage;
 
   const features = [
-    { icon: "💎", title: "Verified import partners" },
-    { icon: "🔐", title: "Secure token-based access" },
-    { icon: "⚡", title: "Fast onboarding in minutes" },
+    { icon: "💎", title: T.features[0] },
+    { icon: "🔐", title: T.features[1] },
+    { icon: "⚡", title: T.features[2] },
   ];
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -80,29 +84,30 @@ export default function SignupPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-bark via-[#0f1f12] to-forest text-cream">
+    <div className="min-h-screen bg-gradient-to-br from-bark via-[#6f3336] to-forest text-cream">
       <div className="max-w-6xl mx-auto px-6 lg:px-10 py-20 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
           <div className="space-y-6">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest/10 text-forest text-sm font-semibold border border-forest/20">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest/10 text-wh
+             text-sm font-semibold border border-cream/90">
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 2 2 7l10 5 10-5-10-5Z" />
                 <path d="M2 17l10 5 10-5" />
                 <path d="M2 12l10 5 10-5" />
               </svg>
-              Premium Access
+              {T.chip}
             </span>
             <h1 className="text-4xl lg:text-5xl font-bold leading-tight" style={{ fontFamily: "var(--font-playfair)" }}>
-              Create your Global Trades account
+              {T.title}
             </h1>
             <p className="text-lg text-bark/70 max-w-xl">
-              A modern, minimal portal to manage inquiries, track shipments, and collaborate with our sourcing team.
+              {T.subtitle}
             </p>
             <div className="grid sm:grid-cols-3 gap-3">
               {features.map((item) => (
                 <div key={item.title} className="flex items-center gap-2 px-3 py-3 rounded-xl bg-white/80 border border-sand/60 shadow-sm backdrop-blur">
                   <span className="text-lg">{item.icon}</span>
-                  <span className="text-sm font-semibold text-bark/80">{item.title}</span>
+                  <span className="text-sm font-semibold text-cre">{item.title}</span>
                 </div>
               ))}
             </div>
@@ -111,8 +116,8 @@ export default function SignupPage() {
           <div className="bg-white/80 rounded-2xl shadow-xl border border-sand/60 backdrop-blur p-8 lg:p-10">
             <div className="flex items-center justify-between mb-6">
               <div>
-                <p className="text-sm uppercase tracking-[0.2em] text-bark/60 font-semibold">Sign up</p>
-                <h2 className="text-2xl font-bold mt-1">Join the portal</h2>
+                <p className="text-sm uppercase tracking-[0.2em] text-bark/60 font-semibold">{T.formHeading}</p>
+                <h2 className="text-2xl font-bold mt-1">{T.formTitle}</h2>
               </div>
               <span className="px-3 py-1 rounded-full bg-forest text-cream text-xs font-semibold shadow-md">New</span>
             </div>
@@ -120,7 +125,7 @@ export default function SignupPage() {
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="space-y-1">
                 <label className="text-sm font-semibold text-bark/80" htmlFor="username">
-                  Username
+                  {T.username}
                 </label>
                 <input
                   id="username"
@@ -136,7 +141,7 @@ export default function SignupPage() {
 
               <div className="space-y-1">
                 <label className="text-sm font-semibold text-bark/80" htmlFor="email">
-                  Work email
+                  {T.email}
                 </label>
                 <input
                   id="email"
@@ -154,7 +159,7 @@ export default function SignupPage() {
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-1">
                   <label className="text-sm font-semibold text-bark/80" htmlFor="password">
-                    Password
+                    {T.password}
                   </label>
                   <input
                     id="password"
@@ -170,7 +175,7 @@ export default function SignupPage() {
                 </div>
                 <div className="space-y-1">
                   <label className="text-sm font-semibold text-bark/80" htmlFor="confirm">
-                    Confirm password
+                    {T.confirm}
                   </label>
                   <input
                     id="confirm"
@@ -194,7 +199,7 @@ export default function SignupPage() {
                 disabled={loading}
                 className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-forest to-forest-mid text-cream font-semibold px-4 py-3 shadow-lg hover:shadow-xl transition-all disabled:opacity-70"
               >
-                {loading ? "Creating account..." : "Create account"}
+                {loading ? "Creating account..." : T.cta}
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                   <path d="m5 12 5 5L20 7" />
                 </svg>
@@ -202,9 +207,9 @@ export default function SignupPage() {
             </form>
 
             <p className="text-sm text-bark/70 mt-4">
-              Already with us?{" "}
+              {T.haveAccount}{" "}
               <Link href="/login" className="font-semibold text-forest hover:text-forest-mid">
-                Log in instead
+                {T.loginInstead}
               </Link>
             </p>
           </div>
