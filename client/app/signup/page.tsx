@@ -84,7 +84,7 @@ export default function SignupPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-bark via-[#6f3336] to-forest text-cream">
+    <div className="min-h-screen bg-linear-to-br from-bark via-[#6f3336] to-forest text-cream">
       <div className="max-w-6xl mx-auto px-6 lg:px-10 py-20 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
           <div className="space-y-6">
@@ -197,7 +197,7 @@ export default function SignupPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-forest to-forest-mid text-cream font-semibold px-4 py-3 shadow-lg hover:shadow-xl transition-all disabled:opacity-70"
+                className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-linear-to-r from-forest to-forest-mid text-cream font-semibold px-4 py-3 shadow-lg hover:shadow-xl transition-all disabled:opacity-70"
               >
                 {loading ? "Creating account..." : T.cta}
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
